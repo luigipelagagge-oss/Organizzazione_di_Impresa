@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-<meta charset="UTF-8">
-<title>U.D. 4.1 – L’azienda e la sua organizzazione</title>
-<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.D. 4.1 – L’azienda e la sua organizzazione</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<a href="index.html" class="back">← Torna all’indice</a>
+<div class="container">
+    <a href="index.html" class="back">← Torna all’indice</a>
 
-<h1>U.D. 4.1 – L’azienda e la sua organizzazione</h1>
+    <h1>U.D. 4.1 – L’azienda e la sua organizzazione</h1>
 
-<h2>1. Cos’è un’azienda</h2>
-<p>
-Un’azienda è un sistema organizzato di persone, beni e attività che opera per produrre beni o servizi.
-È un sistema economico, organizzato e aperto verso l’ambiente esterno.
-</p>
+    <h2>1. Cos’è un’azienda</h2>
+    <p>
+        Un’azienda è un sistema organizzato di persone, beni e attività che opera per produrre beni o servizi.
+        È definita come un <strong>sistema economico, organizzato e aperto</strong> verso l’ambiente esterno, in quanto scambia risorse e informazioni con il mercato.
+    </p>
 
-<h2>2. Tipi di società</h2>
-<p>
-Le principali forme giuridiche sono: impresa individuale, società di persone (SNC, SAS) e società di capitali (SRL, SPA).
-</p>
+    <h2>2. Tipi di società</h2>
+    <p>
+        Le forme giuridiche si dividono principalmente in:
+    </p>
+    <ul>
+        <li><strong>Impresa Individuale:</strong> Un solo titolare responsabile.</li>
+        <li><strong>Società di Persone (SNC, SAS):</strong> Prevale l'elemento personale, responsabilità illimitata.</li>
+        <li><strong>Società di Capitali (SRL, SPA):</strong> Prevale il capitale, responsabilità limitata al conferimento.</li>
+    </ul>
 
-<h2>3. Organizzazione aziendale</h2>
-<p>
-L’organizzazione definisce ruoli, responsabilità e processi. Le funzioni principali sono: direzione, produzione, amministrazione, commerciale, risorse umane.
-</p>
+    <h2>3. Organizzazione aziendale</h2>
+    <p>
+        L’organizzazione definisce ruoli, responsabilità e processi. Le funzioni principali che troviamo in quasi tutte le aziende sono: Direzione, Produzione, Amministrazione, Commerciale e Risorse Umane.
+    </p>
 
-<h2>4. Organigramma funzionale</h2>
-<p>
-Ecco un esempio di organigramma funzionale di una piccola impresa, rappresentato in stile didattico con icone.
-</p>
+    <h2>4. Organigramma funzionale</h2>
+    <p>
+        Di seguito è rappresentato un organigramma funzionale tipico di una PMI (Piccola Media Impresa).
+    </p>
 
-<div class="svg-container">
+    <div class="svg-container">
+        <svg width="100%" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+            <style>
+                .box { fill: #e8f4f8; stroke: #3498db; stroke-width: 2; rx: 5; }
+                .line { stroke: #333; stroke-width: 2; fill: none; }
+                .text-title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; fill: #2c3e50; text-anchor: middle; }
+                .text-desc { font-family: Arial, sans-serif; font-size: 12px; fill: #555; text-anchor: middle; }
+            </style>
 
-<!-- ORGANIGRAMMA SVG DIDATTICO -->
+            <line x1="300" y1="60" x2="300" y2="100" class="line" />
+            <line x1="75" y1="100" x2="525" y2="100" class="line" />
+            <line x1="75" y1="100" x2="75" y2="130" class="line" />
+            <line x1="225" y1="100" x2="225" y2="130" class="line" />
+            <line x1="375" y1="100" x2="375" y2="130" class="line" />
+            <line x1="525" y1="100" x2="525" y2="130" class="line" />
+
+            <rect x="225" y="10" width="150" height="50" class="box" />
+            <text x="300" y="35" class="text-title" dy="5">DIREZIONE GENERALE</text>
+
+            <rect x="10" y="130" width="130" height="50" class="box" />
+            <text x="75" y="155" class="text-title" dy="5">AMMINISTRAZIONE</text>
+            <text x="75" y="195" class="text-desc">Contabilità, Bilancio</text>
+
+            <rect x="160" y="130" width="130" height="50" class="box" />
+            <text x="225" y="155" class="text-title" dy="5">PRODUZIONE</text>
+            <text x="225" y="195" class="text-desc">Fabbrica, Logistica</text>
+
+            <rect x="310" y="130" width="130" height="50" class="box" />
+            <text x="375" y="155" class="text-title" dy="5">COMMERCIALE</text>
+            <text x="375" y="195" class="text-desc">Vendite, Marketing</text>
+
+            <rect x="460" y="130" width="130" height="50" class="box" />
+            <text x="525" y="155" class="text-title" dy="5">RISORSE UMANE</text>
+            <text x="525" y="195" class="text-desc">Assunzioni, Paghe</text>
+        </svg>
+        </div>
+</div>
+
+</body>
+</html>
