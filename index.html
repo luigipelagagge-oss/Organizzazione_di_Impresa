@@ -3,33 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fondamenti di Economia Aziendale – TPSEE</title>
+    <title>Economia Aziendale Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<div class="container">
-    <h1>Fondamenti di Economia Aziendale</h1>
-    <p>Benvenuto nel portale di studio per TPSEE. Seleziona un'Unità Didattica per iniziare.</p>
+    <nav class="sidebar">
+        <div class="logo">TPSEE • Economia</div>
+        <button class="nav-btn active" onclick="showUnit('home')">🏠 Home / Indice</button>
+        <button class="nav-btn" onclick="showUnit('ud1')">U.D. 4.1 Azienda</button>
+        <button class="nav-btn" onclick="showUnit('ud2')">U.D. 4.2 Qualità</button>
+        <button class="nav-btn" onclick="showUnit('ud3')">U.D. 4.3 Strumenti</button>
+    </nav>
 
-    <div class="menu">
-        <a class="card-link" href="ud1_azienda.html">
-            <strong>U.D. 4.1</strong>
-            <span>L’azienda e l’organizzazione</span>
-        </a>
-        
-        <a class="card-link" href="ud2_qualita.html">
-            <strong>U.D. 4.2</strong>
-            <span>Il concetto di qualità</span>
-        </a>
-        
-        <a class="card-link" href="ud3_strumenti.html">
-            <strong>U.D. 4.3</strong>
-            <span>Strumenti amministrativi</span>
-        </a>
-    </div>
-</div>
+    <main class="main-content">
+
+        <div id="home" class="unit-section active">
+            <h1>Benvenuto nel corso</h1>
+            <p class="subtitle">Seleziona un argomento dal menu laterale per iniziare.</p>
+            
+            <div class="card" style="border-left-color: #61dafb;">
+                <h2>Obiettivi del modulo</h2>
+                <p>In questo modulo esploreremo le basi dell'economia aziendale, partendo dalla definizione di organizzazione fino ad arrivare ai documenti amministrativi reali.</p>
+            </div>
+        </div>
+
+        <div id="ud1" class="unit-section">
+            <h1>U.D. 4.1 – L’azienda</h1>
+            <p class="subtitle">Organizzazione, ruoli e struttura.</p>
+
+            <div class="card">
+                <h2>1. Cos’è un’azienda</h2>
+                <p>Un sistema economico, organizzato e aperto. Interagisce con l'ambiente esterno scambiando risorse (input) e prodotti (output).</p>
+            </div>
+
+            <div class="card">
+                <h2>2. Organigramma Funzionale</h2>
+                <p>Rappresentazione grafica della struttura gerarchica.</p>
+                <div class="svg-wrapper">
+                    <svg width="100%" height="250" viewBox="0 0 600 250">
+                         <style>.box { fill: #fff; stroke: #007bff; stroke-width: 2; rx: 5; } .txt { font-family: sans-serif; font-size: 12px; text-anchor: middle; fill: #333; font-weight: bold; }</style>
+                         <line x1="300" y1="40" x2="300" y2="80" stroke="#333" stroke-width="2"/>
+                         <line x1="100" y1="80" x2="500" y2="80" stroke="#333" stroke-width="2"/>
+                         <line x1="100" y1="80" x2="100" y2="110" stroke="#333" stroke-width="2"/>
+                         <line x1="300" y1="80" x2="300" y2="110" stroke="#333" stroke-width="2"/>
+                         <line x1="500" y1="80" x2="500" y2="110" stroke="#333" stroke-width="2"/>
+                         
+                         <rect x="225" y="5" width="150" height="40" class="box" />
+                         <text x="300" y="30" class="txt">DIREZIONE</text>
+
+                         <rect x="50" y="110" width="100" height="40" class="box" />
+                         <text x="100" y="135" class="txt">PRODUZIONE</text>
+
+                         <rect x="250" y="110" width="100" height="40" class="box" />
+                         <text x="300" y="135" class="txt">AMMINISTRAZIONE</text>
+
+                         <rect x="450" y="110" width="100" height="40" class="box" />
+                         <text x="500" y="135" class="txt">COMMERCIALE</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div id="ud2" class="unit-section">
+            <h1>U.D. 4.2 – La Qualità</h1>
+            <p class="subtitle">Customer satisfaction e miglioramento continuo.</p>
+
+            <div class="card" style="border-left-color: #28a745;">
+                <h2>Il Ciclo di Deming (PDCA)</h2>
+                <p>Non basta fare, bisogna pianificare e controllare.</p>
+                <div class="svg-wrapper">
+                    <svg width="100%" height="200" viewBox="0 0 400 200">
+                        <circle cx="100" cy="100" r="40" fill="#007bff" opacity="0.8"/>
+                        <text x="100" y="105" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">PLAN</text>
+                        
+                        <circle cx="160" cy="100" r="40" fill="#dc3545" opacity="0.8"/>
+                        <text x="160" y="105" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">DO</text>
+                        
+                        <circle cx="220" cy="100" r="40" fill="#ffc107" opacity="0.8"/>
+                        <text x="220" y="105" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">CHECK</text>
+
+                        <circle cx="280" cy="100" r="40" fill="#28a745" opacity="0.8"/>
+                        <text x="280" y="105" fill="white" text-anchor="middle" font-family="sans-serif" font-weight="bold">ACT</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <div id="ud3" class="unit-section">
+            <h1>U.D. 4.3 – Strumenti Amministrativi</h1>
+            <p class="subtitle">Documenti e pagamenti.</p>
+
+            <div class="card" style="border-left-color: #ffc107;">
+                <h2>Flusso Documentale</h2>
+                <p>La sequenza corretta per una compravendita a norma di legge.</p>
+                
+                <div style="display: flex; gap: 10px; margin-top: 20px; flex-wrap: wrap;">
+                    <div style="background: #eee; padding: 15px; border-radius: 8px; flex: 1; text-align: center;">1. Ordine</div>
+                    <div style="background: #eee; padding: 15px; border-radius: 8px; flex: 1; text-align: center;">2. DDT</div>
+                    <div style="background: #ffeeba; padding: 15px; border-radius: 8px; flex: 1; text-align: center; font-weight: bold;">3. Fattura</div>
+                    <div style="background: #d4edda; padding: 15px; border-radius: 8px; flex: 1; text-align: center;">4. Pagamento</div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <script>
+        function showUnit(unitId) {
+            // 1. Nascondi tutte le sezioni
+            document.querySelectorAll('.unit-section').forEach(el => {
+                el.classList.remove('active');
+            });
+
+            // 2. Togli classe 'active' da tutti i bottoni
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // 3. Mostra la sezione scelta
+            document.getElementById(unitId).classList.add('active');
+
+            // 4. Attiva il bottone cliccato (trucco per trovare quale bottone ha chiamato la funzione)
+            // Cerca il bottone che ha l'onclick corrispondente all'ID
+            const activeBtn = Array.from(document.querySelectorAll('.nav-btn')).find(btn => btn.getAttribute('onclick').includes(unitId));
+            if (activeBtn) activeBtn.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
