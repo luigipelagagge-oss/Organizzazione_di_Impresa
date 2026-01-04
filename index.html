@@ -10,13 +10,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   
   <style>
-    /* Personalizzazioni minime per renderlo identico al tuo gusto */
     :root {
       --base-font-size: 16px;
-      --theme-color: #007bff; /* Il blu che usavamo */
+      --theme-color: #007bff;
       --sidebar-width: 18rem;
     }
     .sidebar { background-color: #f8f9fa; border-right: 1px solid #e9ecef; }
+    /* Fix per le tabelle */
+    table { display: table !important; width: 100%; }
   </style>
 </head>
 <body>
@@ -25,16 +26,26 @@
   <script>
     window.$docsify = {
       name: 'TPSEE • Economia',
-      repo: '', /* Se vuoi metti qui il link al tuo github */
-      loadSidebar: true,    /* Attiva menu laterale da file */
-      subMaxLevel: 3,       /* Genera indice automatico dai titoli h2/h3 */
-      auto2top: true,       /* Torna su quando cambi pagina */
-      search: 'auto',       /* Aggiunge la barra di ricerca! */
+      repo: '', 
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: 'auto',
+      
+      // QUESTA PARTE MANCAVA: Configurazione per i grafici
+      mermaidConfig: {
+        querySelector: ".mermaid"
+      }
     }
   </script>
   
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  
+  <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
+  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true });</script>
+
 </body>
 </html>
