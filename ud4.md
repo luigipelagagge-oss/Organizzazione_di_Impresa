@@ -1,42 +1,47 @@
-# U.D. 4.4 – La Sicurezza sul Lavoro (D.Lgs 81/08)
+# U.D. 4.4 – L'Organigramma della Sicurezza (D.Lgs 81/08)
 
 ## 1. Il Quadro Normativo
-In Italia, la salute e la sicurezza nei luoghi di lavoro sono regolate dal **D.Lgs. 81/2008**, noto come "Testo Unico sulla Sicurezza".
-L'obiettivo della legge non è solo risarcire i danni, ma **prevenirli** attraverso un'organizzazione aziendale specifica.
+Il riferimento assoluto è il **D.Lgs 81/2008** (Testo Unico sulla Salute e Sicurezza).
+All'**Articolo 2**, la legge definisce esattamente chi sono gli "attori" della sicurezza e quali sono i loro compiti.
 
-> **Concetto chiave:** La sicurezza non è un costo, ma un investimento obbligatorio per la tutela della persona.
+> **Principio Giuridico:** La responsabilità penale non è solo di chi firma, ma di chi ha l'effettivo potere decisionale (Principio di Effettività).
 
-## 2. Differenza tra Pericolo e Rischio
-Prima di vedere i ruoli, è fondamentale distinguere questi due concetti spesso confusi:
+## 2. La Gerarchia della Sicurezza
+In azienda esistono due linee diverse:
+1.  **Linea Gerarchica (Comando):** Chi ha poteri decisionali e di spesa.
+2.  **Linea Consultiva (Staff):** Chi consiglia e controlla, ma non comanda.
 
-| Concetto | Definizione | Esempio |
-| :--- | :--- | :--- |
-| **PERICOLO** | Proprietà intrinseca di qualcosa di causare danni. (È la "potenzialità" del danno). | Un cavo elettrico scoperto, una sostanza tossica. |
-| **RISCHIO** | La probabilità che il pericolo causi effettivamente un danno. | Toccare il cavo scoperto. |
-
-> **Obiettivo:** Il pericolo spesso non si può eliminare, ma il **rischio si deve ridurre** (misure di prevenzione).
-
-## 3. L'Organigramma della Sicurezza
-La legge definisce dei ruoli precisi (Attori della Sicurezza), ognuno con responsabilità specifiche.
+Ecco l'organigramma corretto secondo la norma:
 
 ```mermaid
 graph TD
-    DL[**DATORE DI LAVORO**<br>Responsabilità Civile e Penale]:::boss --> RSPP[**RSPP**<br>Resp. Servizio Prevenzione<br>e Protezione]:::tech
-    DL --> MC[**MEDICO COMPETENTE**<br>Sorveglianza Sanitaria]:::doc
-    
-    subgraph Lavoratori
-    PRE[**Preposto**<br>Sovrintende e controlla]:::worker --> LAV[**Lavoratore**<br>Obbligo di usare i DPI]:::worker
-    end
-    
-    RSPP -.->|Consulenza Tecnica| DL
-    MC -.->|Visite Mediche| LAV
-    
-    RLS[**RLS**<br>Rappr. Lavoratori<br>per la Sicurezza]:::rep -.->|Consulta e Controlla| DL
-    RLS -.->|Portavoce| LAV
+    %% DEFINIZIONE NODI
+    DL[**DATORE DI LAVORO**<br>Vertice Assoluto]:::boss
+    DIR[**DIRIGENTE**<br>Attua le direttive]:::man
+    PRE[**PREPOSTO**<br>Sovrintende e controlla]:::man
+    LAV[**LAVORATORE**<br>Esegue]:::worker
 
-    %% Stili grafici
-    classDef boss fill:#000,color:#fff,stroke:#333;
-    classDef tech fill:#007bff,color:#fff;
-    classDef doc fill:#28a745,color:#fff;
-    classDef rep fill:#ffc107,color:#000;
-    classDef worker fill:#fff,stroke:#333;
+    %% STAFF E CONTROLLO
+    RSPP[**RSPP**<br>Consulente Tecnico]:::staff
+    MC[**MEDICO COMP.**<br>Sorveglianza]:::staff
+    RLS[**RLS**<br>Rappresentante Lavoratori]:::rep
+
+    %% RELAZIONI GERARCHICHE (Linee spesse)
+    DL ==>|Delega e Direttive| DIR
+    DIR ==>|Organizza| PRE
+    PRE ==>|Vigila| LAV
+
+    %% RELAZIONI FUNZIONALI (Linee tratteggiate)
+    DL -.->|Nomina| RSPP
+    DL -.->|Nomina| MC
+    RSPP -.->|Consiglia| DL
+    MC -.->|Visita| LAV
+    LAV -.->|Elegge| RLS
+    RLS -.->|Consulta| DL
+
+    %% STILI GRAFICI
+    classDef boss fill:#000,color:#fff,stroke:#333,stroke-width:4px;
+    classDef man fill:#007bff,color:#fff,stroke:#333;
+    classDef worker fill:#fff,stroke:#333,color:#000;
+    classDef staff fill:#6c757d,color:#fff,stroke-dasharray: 5 5;
+    classDef rep fill:#ffc107,color:#000,stroke:#333; 
