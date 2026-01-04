@@ -11,7 +11,7 @@ Questa azienda fittizia ("ElectroTech S.p.A.") adotta tre certificazioni volonta
 3.  **AMBIENTE (ISO 14001)** -> Per la tutela del pianeta.
 
 ## 2. L'Organigramma Funzionale
-> **Istruzione:** Clicca sulle caselle colorate (Staff SGI) per aprire le schede delle Norme ISO.
+> **Istruzione:** Clicca sulle caselle colorate (Staff SGI) o sui Ruoli (Direttori, Capi) per aprire le schede di dettaglio.
 
 ```mermaid
 graph TD
@@ -60,15 +60,29 @@ graph TD
     SGI -.->|Procedure e Controlli| DTEC
     SGI -.->|Audit| DAMM
 
-    %% --- LINK INTERATTIVI ---
-    %% Ho rinominato il nodo RSPP in SIC per non confonderlo con la persona
-    %% I link puntano ai file che DEVI AVER CREATO
+    %% --- LINK INTERATTIVI (TUTTI ATTIVI) ---
     
-    click QUAL "#/def_iso_9001" "Vai a: Sistema Qualità"
-    click SIC "#/def_iso_45001" "Vai a: Sistema Sicurezza"
-    click AMB "#/def_iso_14001" "Vai a: Sistema Ambiente"
-    click DL "#/def_datore" "Vai a: Ruolo Datore"
+    %% 1. Norme ISO
+    click QUAL "#/def_iso_9001" "Apri ISO 9001 (Qualità)"
+    click SIC "#/def_iso_45001" "Apri ISO 45001 (Sicurezza)"
+    click AMB "#/def_iso_14001" "Apri ISO 14001 (Ambiente)"
     
+    %% 2. Datore di Lavoro
+    click DL "#/def_datore" "Apri Ruolo Datore"
+
+    %% 3. Dirigenti (Tutti vanno alla scheda Dirigente)
+    click DTEC "#/def_dirigente" "Apri Ruolo Dirigente"
+    click DAMM "#/def_dirigente" "Apri Ruolo Dirigente"
+    click DCOM "#/def_dirigente" "Apri Ruolo Dirigente"
+
+    %% 4. Preposti (Tutti vanno alla scheda Preposto)
+    click CPROD "#/def_preposto" "Apri Ruolo Preposto"
+    click CMAN "#/def_preposto" "Apri Ruolo Preposto"
+
+    %% 5. Lavoratori
+    click OP1 "#/def_lavoratore" "Apri Ruolo Lavoratore"
+    click OP2 "#/def_lavoratore" "Apri Ruolo Lavoratore"
+
     %% --- STILI ---
     classDef boss fill:#000,color:#fff,stroke-width:4px;
     classDef manager fill:#0056b3,color:#fff;
