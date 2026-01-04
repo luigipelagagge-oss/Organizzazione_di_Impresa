@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <title>Economia Aziendale TPSEE</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="description" content="Appunti di Economia Aziendale">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
@@ -16,7 +15,6 @@
       --sidebar-width: 18rem;
     }
     .sidebar { background-color: #f8f9fa; border-right: 1px solid #e9ecef; }
-    /* Fix per le tabelle */
     table { display: table !important; width: 100%; }
   </style>
 </head>
@@ -27,13 +25,11 @@
     window.$docsify = {
       name: 'TPSEE • Economia',
       repo: '', 
-      // Diciamo esplicitamente come si chiama il file
-      loadSidebar: 'sidebar.md',
+      loadSidebar: 'sidebar.md', /* Assicurati che questo nome sia uguale al tuo file */
       subMaxLevel: 3,
       auto2top: true,
-      search: 'auto',
       
-      // QUESTA PARTE MANCAVA: Configurazione per i grafici
+      // CONFIGURAZIONE GRAFICI (FONDAMENTALE)
       mermaidConfig: {
         querySelector: ".mermaid"
       }
