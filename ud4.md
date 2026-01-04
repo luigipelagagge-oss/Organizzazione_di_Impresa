@@ -2,7 +2,6 @@
 
 ## La Mappa delle Responsabilità
 > **Istruzione:** Clicca sulle figure per aprire la **Scheda di Dettaglio**.
-> Leggi le scritte sulle frecce per capire le azioni giuridiche.
 
 ```mermaid
 graph TD
@@ -17,12 +16,12 @@ graph TD
     MC["MEDICO COMP.<br>(Sanitario)"]:::staff
     RLS["RLS<br>(Rappresentante)"]:::rep
 
-    %% --- COLLEGAMENTI GERARCHICI (Con etichette ripristinate) ---
+    %% --- COLLEGAMENTI GERARCHICI ---
     DL ==>|Delega e Direttive| DIR
     DIR ==>|Organizza| PRE
     PRE ==>|Vigila e Sovrintende| LAV
 
-    %% --- COLLEGAMENTI FUNZIONALI (Con etichette ripristinate) ---
+    %% --- COLLEGAMENTI FUNZIONALI ---
     DL -.->|Nomina| RSPP
     DL -.->|Nomina| MC
     RSPP -.->|Consiglia| DL
@@ -30,14 +29,16 @@ graph TD
     LAV -.->|Elegge| RLS
     RLS -.->|Consulta| DL
 
-    %% --- LINK ALLE SCHEDE DETTAGLIATE ---
-    click DL "/#/def_datore" "Apri scheda: DATORE DI LAVORO"
-    click DIR "/#/def_dirigente" "Apri scheda: DIRIGENTE"
-    click PRE "/#/def_preposto" "Apri scheda: PREPOSTO"
-    click LAV "/#/def_lavoratore" "Apri scheda: LAVORATORE"
-    click RSPP "/#/def_rspp" "Apri scheda: RSPP"
-    click MC "/#/def_medico" "Apri scheda: MEDICO"
-    click RLS "/#/def_rls" "Apri scheda: RLS"
+    %% --- LINK ALLE SCHEDE (VERSIONE CORRETTA) ---
+    %% Nota: C'è solo il cancelletto #, senza lo slash davanti.
+    
+    click DL "#/def_datore" "Scheda: DATORE DI LAVORO"
+    click DIR "#/def_dirigente" "Scheda: DIRIGENTE"
+    click PRE "#/def_preposto" "Scheda: PREPOSTO"
+    click LAV "#/def_lavoratore" "Scheda: LAVORATORE"
+    click RSPP "#/def_rspp" "Scheda: RSPP"
+    click MC "#/def_medico" "Scheda: MEDICO"
+    click RLS "#/def_rls" "Scheda: RLS"
 
     %% --- STILI ---
     classDef boss fill:#000,color:#fff,stroke-width:4px;
