@@ -3,15 +3,22 @@
 ## La Tutela Ambientale in Azienda
 L'azienda non deve danneggiare l'ecosistema circostante. La norma **ISO 14001** certifica che l'impresa tiene sotto controllo i suoi **Impatti Ambientali**.
 
-## Concetti Chiave
-1.  **Analisi Ambientale:** Capire come l'azienda inquina (Aria, Acqua, Suolo, Rumore).
-2.  **Ciclo di Vita (LCA):** Non guardiamo solo alla produzione, ma a cosa succede al prodotto quando viene buttato via (dalla culla alla tomba).
-3.  **Conformità Legislativa:** Rispetto del D.Lgs 152/2006 (Testo Unico Ambientale).
+## I Pilastri della Gestione Ambientale
+Per essere conformi alla norma (e alla legge D.Lgs 152/06), l'azienda deve gestire correttamente:
 
-## Approfondimenti Tecnici (In lavorazione)
-* Gestione Rifiuti (MUD, FIR).
-* Scarichi idrici.
-* Emissioni in atmosfera.
+1.  ### 🗑️ [Gestione dei Rifiuti Speciali](def_rifiuti.md)
+    * Classificazione (Codici CER).
+    * Registro di Carico/Scarico.
+    * Formulari (FIR) e MUD.
+    * *Clicca sul titolo per aprire la scheda dettagliata.*
+
+2.  ### 🏭 Emissioni e Scarichi (In lavorazione)
+    * Fumi in atmosfera.
+    * Acque reflue industriali.
+
+3.  ### ⚡ Efficienza Energetica
+    * Riduzione dei consumi.
+    * Fonti rinnovabili.
 
 ---
 [🔙 Torna all'Organigramma Aziendale](ud1.md)
