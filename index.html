@@ -25,13 +25,15 @@
     window.$docsify = {
       name: 'TPSEE • Economia',
       repo: '', 
-      loadSidebar: 'sidebar.md', /* Assicurati che questo nome sia uguale al tuo file */
+      loadSidebar: 'sidebar.md',
       subMaxLevel: 3,
       auto2top: true,
       
-      // CONFIGURAZIONE GRAFICI (FONDAMENTALE)
+      // CONFIGURAZIONE MERMAID (ECCO LA PARTE NUOVA FONDAMENTALE)
       mermaidConfig: {
-        querySelector: ".mermaid"
+        querySelector: ".mermaid",
+        securityLevel: 'loose',  /* <--- QUESTO SBLOCCA I CLICK */
+        startOnLoad: true
       }
     }
   </script>
@@ -42,7 +44,13 @@
   
   <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
   <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
-  <script>mermaid.initialize({ startOnLoad: true });</script>
+  
+  <script>
+    mermaid.initialize({ 
+        startOnLoad: true, 
+        securityLevel: 'loose' /* <--- ANCHE QUI È FONDAMENTALE */
+    });
+  </script>
 
 </body>
 </html>
