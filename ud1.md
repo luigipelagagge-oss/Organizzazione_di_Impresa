@@ -1,75 +1,56 @@
- # U.D. 4.1 – L’Azienda e il Sistema Integrato
+# U.D. 4.1 – L’Azienda e il Sistema Integrato
 
 ## 1. L'Azienda come Sistema Complesso
-Non possiamo vedere l'azienda solo come "produzione di beni". Oggi un'azienda moderna (specialmente nel settore tecnologico/elettrico) è un sistema di processi interconnessi che devono rispettare normative rigide.
+Non possiamo vedere l'azienda solo come "produzione di beni". Oggi un'azienda moderna è un sistema di processi interconnessi.
 
 Immaginiamo la **"ElectroTech S.p.A."**, un'azienda fittizia del settore impianti.
 
 ### I tre pilastri normativi (Sistema Integrato)
-Questa azienda adotta un **S.G.I. (Sistema di Gestione Integrato)** che unisce tre certificazioni fondamentali:
+Questa azienda adotta un **S.G.I.** che unisce tre certificazioni:
+1.  **QUALITÀ (ISO 9001)**
+2.  **SICUREZZA (ISO 45001)**
+3.  **AMBIENTE (ISO 14001)**
 
-1.  **QUALITÀ (ISO 9001):** "Soddisfare il cliente e migliorare i processi."
-2.  **SICUREZZA (ISO 45001):** "Proteggere i lavoratori da infortuni e malattie." (Ex OHSAS 18001)
-3.  **AMBIENTE (ISO 14001):** "Ridurre l'inquinamento e l'impatto ambientale."
-
-## 2. L'Organigramma Funzionale e Gerarchico
-In questo schema vediamo sia le **funzioni aziendali** (chi fa cosa) sia i **ruoli della sicurezza** (chi risponde penalmente secondo il D.Lgs 81/08).
-
-*Nota: Le etichette tra parentesi indicano il ruolo ai fini della Sicurezza.*
+## 2. L'Organigramma Funzionale
+> **Istruzione:** Passa con il mouse sui ruoli per vedere la definizione rapida. Clicca per andare alla tabella dettagliata.
 
 ```mermaid
 graph TD
-    %% --- LIVELLO 1: VERTICE ---
+    %% VERTICE
     DL["DIREZIONE GENERALE<br>(Datore di Lavoro)"]:::boss
     
-    %% --- LIVELLO STAFF (QSA) ---
-    subgraph SGI [Ufficio Q.H.S.E. - Staff al Datore]
-        RSPP["RSPP & SICUREZZA<br>ISO 45001"]:::safety
-        QUAL["QUALITÀ<br>ISO 9001"]:::quality
-        AMB["AMBIENTE<br>ISO 14001"]:::env
+    %% STAFF
+    subgraph SGI [Ufficio Q.H.S.E.]
+        RSPP["RSPP & SICUREZZA"]:::safety
+        QUAL["QUALITÀ"]:::quality
+        AMB["AMBIENTE"]:::env
     end
 
-    %% --- LIVELLO 2: DIRIGENZA (Line) ---
-    D_TECNICO["DIRETTORE TECNICO<br>(Dirigente)"]:::manager
-    D_AMM["DIR. AMMINISTRATIVO<br>(Dirigente)"]:::manager
-    D_COMM["DIR. COMMERCIALE<br>(Dirigente)"]:::manager
-
-    %% --- LIVELLO 3: PREPOSTI (Middle Management) ---
-    C_PROD["CAPO REPARTO PRODUZIONE<br>(Preposto)"]:::super
-    C_MAN["CAPO SQUADRA MANUTENZIONE<br>(Preposto)"]:::super
-    UFF_ACQ["Ufficio Acquisti & Contabilità"]:::office
-    VEND["Vendite & Marketing"]:::office
-
-    %% --- LIVELLO 4: OPERATIVI ---
-    OP_PROD["Operai Specializzati<br>(Lavoratori)"]:::worker
-    OP_MAN["Tecnici Manutentori<br>(Lavoratori)"]:::worker
-
-    %% --- COLLEGAMENTI ---
-    DL ==> D_TECNICO
-    DL ==> D_AMM
-    DL ==> D_COMM
+    %% LINEA
+    DL ==> D_TEC["DIRETTORE TECNICO<br>(Dirigente)"]:::manager
+    DL ==> D_AMM["DIR. AMMINISTRATIVO"]:::manager
     
-    %% Relazioni Staff (Consulenza)
+    D_TEC ==> C_PROD["CAPO REPARTO<br>(Preposto)"]:::super
+    C_PROD ==> OP["OPERAI<br>(Lavoratori)"]:::worker
+
+    %% COLLEGAMENTI STAFF
     DL -.-> SGI
-    SGI -.->|Procedure e Controlli| D_TECNICO
+    SGI -.-> D_TEC
 
-    %% Relazioni Linea Tecnica
-    D_TECNICO ==> C_PROD
-    D_TECNICO ==> C_MAN
+    %% --- INTERATTIVITÀ (Hover & Click) ---
+    %% Sintassi: click ID "URL" "TESTO CHE APPARE AL PASSAGGIO DEL MOUSE"
     
-    C_PROD ==> OP_PROD
-    C_MAN ==> OP_MAN
+    click DL "/#/ud1?id=tabella-ruoli" "DATORE DI LAVORO: Ha il potere di spesa. Valuta i rischi e firma il DVR."
+    click D_TEC "/#/ud1?id=tabella-ruoli" "DIRIGENTE: Organizza il lavoro. Decide i turni e le tecnologie."
+    click C_PROD "/#/ud1?id=tabella-ruoli" "PREPOSTO: L'occhio del padrone. Controlla che gli operai usino i DPI."
+    click OP "/#/ud1?id=tabella-ruoli" "LAVORATORE: Esegue il lavoro e segnala i pericoli."
+    click RSPP "/#/ud1?id=tabella-ruoli" "RSPP: Consulente tecnico. Non comanda, ma scrive le procedure."
 
-    %% Relazioni Altri Reparti
-    D_AMM --> UFF_ACQ
-    D_COMM --> VEND
-
-    %% --- STILI ---
-    classDef boss fill:#000,color:#fff,stroke-width:4px;
+    %% STILI
+    classDef boss fill:#000,color:#fff;
     classDef manager fill:#0056b3,color:#fff;
     classDef super fill:#007bff,color:#fff;
     classDef worker fill:#fff,stroke:#333;
     classDef safety fill:#dc3545,color:#fff;
     classDef quality fill:#ffc107,color:#000;
-    classDef env fill:#28a745,color:#fff;
-    classDef office fill:#e2e6ea,stroke:#333,stroke-dasharray: 5 5;
+    classDef env fill:#28a745,color:#fff;  
