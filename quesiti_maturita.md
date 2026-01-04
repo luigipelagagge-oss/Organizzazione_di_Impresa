@@ -61,7 +61,7 @@ Colleghiamo questo tema alla gestione ambientale ISO 14001.
 
 ### 🔗 Il percorso nel Manuale
 * Vai al Sistema Ambiente: [**UD 4.1 - Sistema Ambiente**](ud1.md)
-* Studia la gestione operativa: [**Scheda: Gestione Rifiuti**](def_rifiuti.md) *(Nota: Argomento da integrare)*
+* Studia la gestione operativa: [**Scheda: Gestione Rifiuti**](def_rifiuti.md)
 
 ---
 
@@ -88,7 +88,7 @@ Il Business Plan è il documento che trasforma un'idea in un progetto d'impresa.
 2.  **Parte Numerica:** Piano degli investimenti (quanti soldi servono) e Previsioni economiche (ricavi vs costi).
 
 ### 🔗 Il percorso nel Manuale
-* Contesto aziendale: [**UD 4.1 - L'Azienda**](ud1.md) *(Nota: Argomento da sviluppare)*
+* Contesto aziendale: [**UD 4.1 - L'Azienda**](ud1.md)
 
 ---
 
@@ -105,4 +105,40 @@ Devi elencare le forme con cui il "Lavoratore" si lega al "Datore".
 * Vedi i soggetti: [**Scheda: Lavoratore**](def_lavoratore.md)
 
 ---
+
+## 8. Produzione: Ciclo PCB e Analisi SWOT
+> **Quesito:** *"Si descrivano le fasi che caratterizzano la produzione di una scheda elettronica, dalla sua ideazione fino alla realizzazione del circuito stampato, evidenziando le eventuali criticità delle singole fasi sintetizzando, ove possibile, in una analisi SWOT."*
+
+### 💡 Come rispondere
+Questo quesito unisce tecnologia e gestione.
+1.  **Le Fasi:** Parti dall'Idea -> Schema Elettrico -> Sbroglio (Layout PCB) -> Fabbricazione PCB -> Assemblaggio componenti.
+2.  **Criticità:** Cita errori di progettazione (schema errato), problemi termici, o componenti non reperibili (supply chain).
+3.  **Matrice SWOT:** Disegna la matrice a 4 quadranti.
+    * **Interni:** Punti di Forza (es. know-how) e Debolezza (es. costi alti).
+    * **Esterni:** Opportunità (es. nuovi mercati) e Minacce (es. concorrenza asiatica).
+    * *Attenzione:* Si scrive **SWOT** (non SWAT, che è la polizia!).
+
+### 🔗 Il percorso nel Manuale
+* Contesto Produttivo: [**UD 4.1 - L'Azienda**](ud1.md)
+* *(Se presente)*: Scheda Progettazione Elettronica
+
+---
+
+## 9. Sicurezza: Figure Obbligatorie (D.Lgs 81/08)
+> **Quesito:** *"In base alle indicazioni del D.Lgs 81/2008 e scelto un ambiente di lavoro noto (es. laboratorio), il candidato elenchi gli ambiti per i quali è necessario individuare figure specifiche per la sicurezza descrivendone competenze e compiti."*
+
+### 💡 Come rispondere
+Scegli un ambiente concreto (es. Laboratorio Elettronico) e descrivi "chi fa cosa".
+1.  **RSPP:** Il tecnico che valuta i rischi (Competenza gestionale/normativa).
+2.  **Medico Competente:** Sorveglianza sanitaria e visite periodiche (Competenza medica).
+3.  **RLS:** Il rappresentante dei colleghi (Competenza sindacale/diritti).
+4.  **Addetti Emergenze:** Primo soccorso e Antincendio (Corsi specifici pratici).
+5.  **Preposto:** Il capo-laboratorio che controlla che si usino i DPI.
+
+### 🔗 Il percorso nel Manuale
+* Organigramma completo: [**UD 4.4 - Sicurezza**](ud4.md)
+* Vedi le figure: [**Scheda: RSPP**](def_rspp.md), [**Scheda: RLS**](def_rls.md), [**Scheda: Medico**](def_medico.md)
+
+---
+
 [🔙 Torna alla Home](README.md)
