@@ -1,7 +1,8 @@
- # U.D. 4.4 – L'Organigramma della Sicurezza (D.Lgs 81/08)
+  # U.D. 4.4 – L'Organigramma della Sicurezza (D.Lgs 81/08)
 
 ## La Mappa delle Responsabilità
-Clicca su una figura per aprire la sua **Scheda Tecnica** con compiti, sanzioni e approfondimenti.
+> **Istruzione:** Clicca sulle figure per aprire la **Scheda di Dettaglio**.
+> Leggi le scritte sulle frecce per capire le azioni giuridiche.
 
 ```mermaid
 graph TD
@@ -16,16 +17,20 @@ graph TD
     MC["MEDICO COMP.<br>(Sanitario)"]:::staff
     RLS["RLS<br>(Rappresentante)"]:::rep
 
-    %% --- COLLEGAMENTI ---
-    DL ==> DIR ==> PRE ==> LAV
-    DL -.-> RSPP
-    DL -.-> MC
-    LAV -.-> RLS
-    RLS -.-> DL
+    %% --- COLLEGAMENTI GERARCHICI (Con etichette ripristinate) ---
+    DL ==>|Delega e Direttive| DIR
+    DIR ==>|Organizza| PRE
+    PRE ==>|Vigila e Sovrintende| LAV
 
-    %% --- LINK ALLE NUOVE PAGINE ---
-    %% Nota come ora i link puntano a file specifici (def_...)
-    
+    %% --- COLLEGAMENTI FUNZIONALI (Con etichette ripristinate) ---
+    DL -.->|Nomina| RSPP
+    DL -.->|Nomina| MC
+    RSPP -.->|Consiglia| DL
+    MC -.->|Visita| LAV
+    LAV -.->|Elegge| RLS
+    RLS -.->|Consulta| DL
+
+    %% --- LINK ALLE SCHEDE DETTAGLIATE ---
     click DL "/#/def_datore" "Apri scheda: DATORE DI LAVORO"
     click DIR "/#/def_dirigente" "Apri scheda: DIRIGENTE"
     click PRE "/#/def_preposto" "Apri scheda: PREPOSTO"
