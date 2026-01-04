@@ -3,67 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>U.D. 4.2 – Il concetto di qualità</title>
+    <title>U.D. 4.2 – Qualità</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<div class="container">
-    <a href="index.html" class="back">← Torna all’indice</a>
+    <nav class="sidebar">
+        <div class="logo">TPSEE • Economia</div>
+        <a href="index.html" class="nav-link">🏠 Home / Indice</a>
+        <a href="ud1.html" class="nav-link">U.D. 4.1 Azienda</a>
+        <a href="ud2.html" class="nav-link active">U.D. 4.2 Qualità</a>
+        <a href="ud3.html" class="nav-link">U.D. 4.3 Strumenti</a>
+    </nav>
 
-    <h1>U.D. 4.2 – Il concetto di qualità</h1>
+    <main class="main-content">
+        <h1>U.D. 4.2 – La Qualità</h1>
+        <p class="subtitle">Customer satisfaction e miglioramento continuo.</p>
 
-    <h2>1. Che cos'è la Qualità?</h2>
-    <p>
-        In economia aziendale, la qualità non è solo "fare bene le cose", ma è la capacità di soddisfare le esigenze del cliente (Customer Satisfaction).
-        Oggi si parla di <strong>Qualità Totale (TQM)</strong>, un approccio che coinvolge tutta l'azienda, dal magazziniere al direttore generale.
-    </p>
-
-    <h2>2. Il Ciclo di Deming (PDCA)</h2>
-    <p>
-        Per migliorare continuamente i processi aziendali si utilizza il metodo PDCA. Ecco come funziona:
-    </p>
-
-    <div class="svg-container">
-        <svg width="100%" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-            <style>
-                .circle-bg { fill: none; stroke: #e0e0e0; stroke-width: 15; }
-                .p-sector { fill: #3498db; }
-                .d-sector { fill: #e74c3c; }
-                .c-sector { fill: #f1c40f; }
-                .a-sector { fill: #2ecc71; }
-                .label { font-family: Arial, sans-serif; font-weight: bold; fill: #fff; font-size: 18px; text-anchor: middle; }
-                .desc { font-family: Arial, sans-serif; fill: #555; font-size: 14px; text-anchor: middle; }
-            </style>
-
-            <text x="300" y="155" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#333" font-size="20">PDCA</text>
-
-            <rect x="180" y="50" width="115" height="95" rx="10" class="p-sector" />
-            <text x="237" y="90" class="label">PLAN</text>
-            <text x="237" y="110" font-size="12" fill="white" text-anchor="middle">Pianificare</text>
-
-            <rect x="305" y="50" width="115" height="95" rx="10" class="d-sector" />
-            <text x="362" y="90" class="label">DO</text>
-            <text x="362" y="110" font-size="12" fill="white" text-anchor="middle">Eseguire</text>
-
-            <rect x="305" y="155" width="115" height="95" rx="10" class="c-sector" />
-            <text x="362" y="195" class="label">CHECK</text>
-            <text x="362" y="215" font-size="12" fill="#333" text-anchor="middle">Controllare</text>
-
-            <rect x="180" y="155" width="115" height="95" rx="10" class="a-sector" />
-            <text x="237" y="195" class="label">ACT</text>
-            <text x="237" y="215" font-size="12" fill="white" text-anchor="middle">Agire</text>
+        <div class="card" style="border-left-color: #28a745;">
+            <h2>Il Ciclo di Deming (PDCA)</h2>
+            <p>La qualità non è un punto di arrivo, ma un processo circolare che si ripete all'infinito per migliorare sempre.</p>
             
-            <path d="M 300 40 L 320 40" stroke="#999" stroke-width="2" marker-end="url(#arrow)" />
-        </svg>
-    </div>
+            <div class="svg-wrapper">
+                <svg width="100%" height="350" viewBox="0 0 400 350">
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+                        </marker>
+                    </defs>
+                    <circle cx="200" cy="175" r="40" fill="#f8f9fa" stroke="#ddd" stroke-width="2" />
+                    <text x="200" y="170" text-anchor="middle" font-size="10" fill="#999" font-family="sans-serif">Miglioramento</text>
+                    <text x="200" y="185" text-anchor="middle" font-size="10" fill="#999" font-family="sans-serif">Continuo</text>
 
-    <h2>3. La Certificazione ISO 9001</h2>
-    <p>
-        Le norme ISO 9000 sono standard internazionali. Un'azienda certificata garantisce ai propri clienti che i suoi processi produttivi sono controllati e standardizzati.
-    </p>
-</div>
+                    <path d="M 160 65 A 100 100 0 0 1 240 65" fill="none" stroke="#007bff" stroke-width="35" />
+                    <text x="200" y="60" text-anchor="middle" fill="white" font-weight="bold" font-family="sans-serif" dy="5">PLAN</text>
+                    <path d="M 250 75 Q 280 90 290 120" fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
 
+                    <path d="M 310 135 A 100 100 0 0 1 310 215" fill="none" stroke="#dc3545" stroke-width="35" />
+                    <text x="325" y="180" text-anchor="middle" fill="white" font-weight="bold" font-family="sans-serif" dy="5">DO</text>
+                    <path d="M 300 230 Q 280 260 250 270" fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <path d="M 240 285 A 100 100 0 0 1 160 285" fill="none" stroke="#ffc107" stroke-width="35" />
+                    <text x="200" y="290" text-anchor="middle" fill="#333" font-weight="bold" font-family="sans-serif" dy="5">CHECK</text>
+                    <path d="M 150 275 Q 120 260 110 230" fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+
+                    <path d="M 90 215 A 100 100 0 0 1 90 135" fill="none" stroke="#28a745" stroke-width="35" />
+                    <text x="75" y="180" text-anchor="middle" fill="white" font-weight="bold" font-family="sans-serif" dy="5">ACT</text>
+                    <path d="M 100 120 Q 120 90 150 80" fill="none" stroke="#555" stroke-width="2" marker-end="url(#arrowhead)"/>
+                </svg>
+            </div>
+            
+            <p style="margin-top: 20px; font-size: 0.9rem; color: #666;">
+                <strong>Come leggere il grafico:</strong> Si parte dall'alto (PLAN) e si segue il senso orario. Una volta arrivati alla fase ACT, il ciclo ricomincia.
+            </p>
+        </div>
+    </main>
 </body>
 </html>
