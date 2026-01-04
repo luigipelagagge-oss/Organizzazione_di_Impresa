@@ -20,29 +20,29 @@ In questo schema vediamo sia le **funzioni aziendali** (chi fa cosa) sia i **ruo
 ```mermaid
 graph TD
     %% --- LIVELLO 1: VERTICE ---
-    DL[**DIREZIONE GENERALE**<br>(Datore di Lavoro)]:::boss
+    DL["**DIREZIONE GENERALE**<br>(Datore di Lavoro)"]:::boss
     
     %% --- LIVELLO STAFF (QSA) ---
-    subgraph SGI [Ufficio Q.H.S.E. - Staff al Datore]
-        RSPP[**RSPP & SICUREZZA**<br>ISO 45001]:::safety
-        QUAL[**QUALITÀ**<br>ISO 9001]:::quality
-        AMB[**AMBIENTE**<br>ISO 14001]:::env
+    subgraph SGI ["Ufficio Q.H.S.E. - Staff al Datore"]
+        RSPP["**RSPP & SICUREZZA**<br>ISO 45001"]:::safety
+        QUAL["**QUALITÀ**<br>ISO 9001"]:::quality
+        AMB["**AMBIENTE**<br>ISO 14001"]:::env
     end
 
     %% --- LIVELLO 2: DIRIGENZA (Line) ---
-    D_TECNICO[**DIRETTORE TECNICO**<br>(Dirigente)]:::manager
-    D_AMM[**DIR. AMMINISTRATIVO**<br>(Dirigente)]:::manager
-    D_COMM[**DIR. COMMERCIALE**<br>(Dirigente)]:::manager
+    D_TECNICO["**DIRETTORE TECNICO**<br>(Dirigente)"]:::manager
+    D_AMM["**DIR. AMMINISTRATIVO**<br>(Dirigente)"]:::manager
+    D_COMM["**DIR. COMMERCIALE**<br>(Dirigente)"]:::manager
 
     %% --- LIVELLO 3: PREPOSTI (Middle Management) ---
-    C_PROD[**CAPO REPARTO PRODUZIONE**<br>(Preposto)]:::super
-    C_MAN[**CAPO SQUADRA MANUTENZIONE**<br>(Preposto)]:::super
-    UFF_ACQ[Ufficio Acquisti & Contabilità]:::office
-    VEND[Vendite & Marketing]:::office
+    C_PROD["**CAPO REPARTO PRODUZIONE**<br>(Preposto)"]:::super
+    C_MAN["**CAPO SQUADRA MANUTENZIONE**<br>(Preposto)"]:::super
+    UFF_ACQ["Ufficio Acquisti & Contabilità"]:::office
+    VEND["Vendite & Marketing"]:::office
 
     %% --- LIVELLO 4: OPERATIVI ---
-    OP_PROD(Operai Specializzati<br>Lavoratori):::worker
-    OP_MAN(Tecnici Manutentori<br>Lavoratori):::worker
+    OP_PROD("Operai Specializzati<br>(Lavoratori)"):::worker
+    OP_MAN("Tecnici Manutentori<br>(Lavoratori)"):::worker
 
     %% --- COLLEGAMENTI ---
     DL ==> D_TECNICO
