@@ -21,7 +21,7 @@ graph TD
     %% --- STAFF SGI (SISTEMA INTEGRATO) ---
     subgraph SGI [Ufficio Q.H.S.E. - Sistema Integrato]
         QUAL["QUALITÀ<br>(ISO 9001)"]:::quality
-        RSPP["SICUREZZA<br>(ISO 45001)"]:::safety
+        SIC["SICUREZZA<br>(ISO 45001)"]:::safety
         AMB["AMBIENTE<br>(ISO 14001)"]:::env
     end
 
@@ -60,14 +60,13 @@ graph TD
     SGI -.->|Procedure e Controlli| DTEC
     SGI -.->|Audit| DAMM
 
-    %% --- LINK INTERATTIVI (NUOVI FILE) ---
-    %% Notare il # senza slash iniziale
+    %% --- LINK INTERATTIVI ---
+    %% Ho rinominato il nodo RSPP in SIC per non confonderlo con la persona
+    %% I link puntano ai file che DEVI AVER CREATO
     
     click QUAL "#/def_iso_9001" "Vai a: Sistema Qualità"
-    click RSPP "#/def_iso_45001" "Vai a: Sistema Sicurezza"
+    click SIC "#/def_iso_45001" "Vai a: Sistema Sicurezza"
     click AMB "#/def_iso_14001" "Vai a: Sistema Ambiente"
-    
-    %% Link ai ruoli (riutilizziamo quelli che hai già creato!)
     click DL "#/def_datore" "Vai a: Ruolo Datore"
     
     %% --- STILI ---
