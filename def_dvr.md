@@ -1,4 +1,8 @@
- # ⚠️ D.V.R. (Documento Valutazione Rischi)
+---
+layout: default
+---
+
+# ⚠️ D.V.R. (Documento Valutazione Rischi)
 
 Il DVR è il documento **più importante** per la sicurezza. Non è un semplice pezzo di carta, ma la "fotografia dinamica" della sicurezza in azienda.
 
@@ -39,7 +43,7 @@ Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per
 ## 3. Dati Generali del Documento
 
 * **Chi lo redige?**
-    Il **Datore di Lavoro** (obbligo *non delegabile*).
+    * Il **Datore di Lavoro** (obbligo *non delegabile*).
     * Collaborazione obbligatoria: **RSPP** e **Medico Competente**.
     * Consultazione obbligatoria: **RLS**.
 * **Quando si fa?**
@@ -49,6 +53,6 @@ Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per
         * Cambia l'organizzazione del lavoro.
         * Avvengono infortuni significativi o la sorveglianza sanitaria ne evidenzia la necessità.
 * **Data Certa:**
-    Il documento deve avere "Data Certa" (es. PEC, firma digitale) per dimostrare legalmente che è stato fatto *prima* di un eventuale infortunio.
+    Il documento deve avere "Data Certa" (es. PEC, firma digitale) per dimostre legalmente che è stato fatto *prima* di un eventuale infortunio.
 
-[🔙 Torna all'Organigramma](ud4.md)
+[🔙 Torna all'Organigramma](ud4.html)
