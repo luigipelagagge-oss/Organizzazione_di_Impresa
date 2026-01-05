@@ -5,6 +5,7 @@ La sicurezza in azienda si basa su due pilastri: l'**Organigramma delle Persone*
 ---
 
 ## La Mappa Completa: Persone e Documenti
+> **Istruzione:** Clicca sulle caselle del grafico per aprire la scheda di dettaglio.
 
 ```mermaid
 graph TD
@@ -44,7 +45,7 @@ graph TD
     subgraph Documenti ["📄 I DOCUMENTI (Cosa serve)"]
         direction TB
         %% --- NODI ---
-        NORMA("⚖️ D.Lgs 81/08<br>(La Legge)"):::doc_law
+        NORMA("⚖️ D.Lgs 81/08<br>(Clicca per Legge)"):::doc_law
         DVR("⚠️ D.V.R.<br>(Valutazione Rischi)"):::doc_dvr
         POS("🏗️ P.O.S.<br>(Piano Operativo)"):::doc_pos
 
@@ -54,9 +55,10 @@ graph TD
     end
 
     %% ==========================================
-    %%  INTERAZIONI (CLICK)
+    %%  INTERAZIONI (CLICK) - TUTTI PUNTANO A FILE ORA
     %% ==========================================
-    %% Link Persone (Puntano alle schede specifiche)
+    
+    %% Link Persone
     click DL "#/def_datore" "Scheda: Datore di Lavoro"
     click DIR "#/def_dirigente" "Scheda: Dirigente"
     click PRE "#/def_preposto" "Scheda: Preposto"
@@ -65,11 +67,10 @@ graph TD
     click MC "#/def_medico" "Scheda: Medico"
     click RLS "#/def_rls" "Scheda: RLS"
 
-    %% Link Documenti (Puntano alle ancore interne in questa pagina)
-    %% NOTA: Questi puntano agli ID html che ho messo sotto
-    click DVR "#dvr_anchor" "Vai alla definizione DVR"
-    click POS "#pos_anchor" "Vai alla definizione POS"
-    click NORMA "#norma_anchor" "Vai alle Fonti Normative"
+    %% Link Documenti (ORA PUNTANO AI NUOVI FILE)
+    click NORMA "#/def_norme" "Vai alle Fonti Normative"
+    click DVR "#/def_dvr" "Vai alla scheda DVR"
+    click POS "#/def_pos" "Vai alla scheda POS"
 
     %% ==========================================
     %%  STILI (CSS)
