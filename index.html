@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8">
@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
   
   <style>
+    /* STILE BASE ESISTENTE */
     :root {
       --base-font-size: 16px;
       --theme-color: #007bff;
@@ -16,6 +17,19 @@
     }
     .sidebar { background-color: #f8f9fa; border-right: 1px solid #e9ecef; }
     table { display: table !important; width: 100%; }
+
+    /* --- NUOVO: STILE SPECIFICO PER LA STAMPA --- */
+    /* Queste regole si attivano solo quando premi il tasto STAMPA */
+    @media print {
+       /* Nascondi Sidebar, navigazione e il bottone stesso */
+       .sidebar, .sidebar-toggle, .app-nav, .github-corner { display: none !important; }
+       .print-btn { display: none !important; } 
+       
+       /* Allarga il contenuto a tutta pagina */
+       section.content { margin-left: 0 !important; padding-top: 0 !important; }
+       .markdown-section { max-width: 100% !important; padding: 0 !important; }
+       body { font-size: 12pt; }
+    }
   </style>
 </head>
 <body>
@@ -25,16 +39,34 @@
     window.$docsify = {
       name: 'TPSEE • Economia',
       repo: '', 
-      loadSidebar: 'sidebar.md',
+      loadSidebar: 'sidebar.md', // Assicurati che il file si chiami sidebar.md (o _sidebar.md se default)
       subMaxLevel: 3,
       auto2top: true,
       
-      // CONFIGURAZIONE MERMAID (ECCO LA PARTE NUOVA FONDAMENTALE)
+      // CONFIGURAZIONE MERMAID
       mermaidConfig: {
         querySelector: ".mermaid",
-        securityLevel: 'loose',  /* <--- QUESTO SBLOCCA I CLICK */
+        securityLevel: 'loose', 
         startOnLoad: true
-      }
+      },
+
+      // --- NUOVO: PLUGIN PER IL BOTTONE STAMPA ---
+      plugins: [
+        function(hook, vm) {
+          hook.beforeEach(function(html) {
+            // Crea il bottone HTML
+            var printButton = 
+              '<div style="text-align: right; margin-bottom: 20px;">' +
+                '<button class="print-btn" onclick="window.print()" ' +
+                'style="background-color: #007bff; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 5px; font-weight: bold;">' +
+                '🖨️ STAMPA / PDF' +
+                '</button>' +
+              '</div>';
+            // Lo aggiunge PRIMA del contenuto della pagina
+            return printButton + html;
+          });
+        }
+      ]
     }
   </script>
   
@@ -48,7 +80,7 @@
   <script>
     mermaid.initialize({ 
         startOnLoad: true, 
-        securityLevel: 'loose' /* <--- ANCHE QUI È FONDAMENTALE */
+        securityLevel: 'loose' 
     });
   </script>
 
