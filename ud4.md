@@ -5,7 +5,7 @@ La sicurezza in azienda si basa su due pilastri: l'**Organigramma delle Persone*
 ---
 
 ## La Mappa Completa: Persone e Documenti
-> **Istruzione:** Clicca sulle caselle per aprire la scheda di dettaglio o leggere la definizione.
+> **Istruzione:** Clicca sulle caselle del grafico per aprire la scheda di dettaglio.
 
 ```mermaid
 graph TD
@@ -45,11 +45,11 @@ graph TD
     subgraph Documenti ["📄 I DOCUMENTI (Cosa serve)"]
         direction TB
         %% --- NODI ---
-        NORMA("⚖️ D.Lgs 81/08<br>(La Legge)"):::doc_law
+        NORMA("⚖️ D.Lgs 81/08<br>(Clicca per Legge)"):::doc_law
         DVR("⚠️ D.V.R.<br>(Valutazione Rischi)"):::doc_dvr
         POS("🏗️ P.O.S.<br>(Piano Operativo)"):::doc_pos
 
-        %% --- FLUSSI (Sintassi corretta con virgolette) ---
+        %% --- FLUSSI ---
         NORMA == "Impone" ==> DVR
         DVR == "Genera (per cantieri)" ==> POS
     end
@@ -57,7 +57,7 @@ graph TD
     %% ==========================================
     %%  INTERAZIONI (CLICK)
     %% ==========================================
-    %% Link Persone (Puntano alle pagine dedicate)
+    %% Link Persone
     click DL "#/def_datore" "Scheda: Datore di Lavoro"
     click DIR "#/def_dirigente" "Scheda: Dirigente"
     click PRE "#/def_preposto" "Scheda: Preposto"
@@ -66,4 +66,20 @@ graph TD
     click MC "#/def_medico" "Scheda: Medico"
     click RLS "#/def_rls" "Scheda: RLS"
 
-    %% Link Documenti (Puntano alle ancore
+    %% Link Documenti
+    click NORMA "[https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg)" "Apri Gazzetta Ufficiale"
+    click DVR "#/ud4?id=dvr-documento-valutazione-rischi" "Vai alla definizione DVR"
+    click POS "#/ud4?id=pos-piano-operativo-di-sicurezza" "Vai alla definizione POS"
+
+    %% ==========================================
+    %%  STILI (CSS)
+    %% ==========================================
+    classDef boss fill:#000,color:#fff,stroke-width:4px;
+    classDef man fill:#007bff,color:#fff;
+    classDef worker fill:#fff,stroke:#333;
+    classDef staff fill:#6c757d,color:#fff,stroke-dasharray: 5 5;
+    classDef rep fill:#ffc107,color:#000;
+    
+    classDef doc_law fill:#2c3e50,color:#fff,stroke:#f1c40f,stroke-width:2px;
+    classDef doc_dvr fill:#e67e22,color:#fff,stroke:#333,stroke-width:2px;
+    classDef doc_pos fill:#27ae60,color:#fff,stroke:#333,stroke-width:2px;
