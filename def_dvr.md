@@ -1,4 +1,4 @@
-# ⚠️ D.V.R. (Documento Valutazione Rischi)
+ # ⚠️ D.V.R. (Documento Valutazione Rischi)
 
 Il DVR è il documento **più importante** per la sicurezza. Non è un semplice pezzo di carta, ma la "fotografia dinamica" della sicurezza in azienda.
 
@@ -11,24 +11,62 @@ $$R = P \times D$$
 
 Dove:
 * **P = Probabilità:** Quanto è probabile che l'evento accada? (Scala 1-4).
-* **D = Danno:** Se l'evento accade, quanto male ci si fa? (Scala 1-4).
+* **D = Danno (Impatto):** Se l'evento accade, quanto male ci si fa? (Scala 1-4).
 * **R = Rischio:** Il numero finale che indica l'urgenza dell'intervento.
 
 ### 🔢 La Matrice del Rischio
-Ecco come si calcola il livello di rischio incrociando i dati (Tabella interattiva):
+Ecco la visualizzazione grafica del livello di rischio:
 
-| **PROBABILITÀ (P) ⬇️** <br> vs **DANNO (D) ➡️** | **1. Lievissimo**<br>*(es. graffio)* | **2. Lieve**<br>*(es. inabilità < 3gg)* | **3. Grave**<br>*(es. inabilità permanente)* | **4. Gravissimo**<br>*(es. morte)* |
-| :--- | :---: | :---: | :---: | :---: |
-| **4. Altamente Probabile** | 🟨 **4** (Medio) | 🟧 **8** (Alto) | 🟥 **12** (Altissimo) | 🟥 **16** (Critico) |
-| **3. Probabile** | 🟩 **3** (Basso) | 🟨 **6** (Medio) | 🟧 **9** (Alto) | 🟥 **12** (Altissimo) |
-| **2. Poco Probabile** | 🟩 **2** (Basso) | 🟨 **4** (Medio) | 🟨 **6** (Medio) | 🟧 **8** (Alto) |
-| **1. Improbabile** | 🟩 **1** (Basso) | 🟩 **2** (Basso) | 🟩 **3** (Basso) | 🟨 **4** (Medio) |
+<table style="text-align:center; border-collapse: collapse; font-family: Arial, sans-serif;">
+  <tr>
+    <td rowspan="5" style="font-weight:bold; transform: rotate(-90deg); border:none;">PROBABILITÀ</td>
+    <td style="border:none;"></td>
+    <td style="font-weight:bold;">1<br><small>Lieve</small></td>
+    <td style="font-weight:bold;">2<br><small>Medio</small></td>
+    <td style="font-weight:bold;">3<br><small>Grave</small></td>
+    <td style="font-weight:bold;">4<br><small>Gravissimo</small></td>
+  </tr>
+  <tr>
+    <td style="font-weight:bold;">4 <small>(Altissima)</small></td>
+    <td style="background-color:#FFEB3B; color:black; border:1px solid #333; padding:10px;"><b>MEDIO</b><br>(4)</td>
+    <td style="background-color:#FF9800; color:white; border:1px solid #333; padding:10px;"><b>MED-ALTO</b><br>(8)</td>
+    <td style="background-color:#FF3D00; color:white; border:1px solid #333; padding:10px;"><b>ALTO</b><br>(12)</td>
+    <td style="background-color:#FF3D00; color:white; border:1px solid #333; padding:10px;"><b>ALTO</b><br>(16)</td>
+  </tr>
+  <tr>
+    <td style="font-weight:bold;">3 <small>(Probabile)</small></td>
+    <td style="background-color:#FFEB3B; color:black; border:1px solid #333; padding:10px;"><b>MEDIO</b><br>(3)</td>
+    <td style="background-color:#FF9800; color:white; border:1px solid #333; padding:10px;"><b>MED-ALTO</b><br>(6)</td>
+    <td style="background-color:#FF9800; color:white; border:1px solid #333; padding:10px;"><b>MED-ALTO</b><br>(9)</td>
+    <td style="background-color:#FF3D00; color:white; border:1px solid #333; padding:10px;"><b>ALTO</b><br>(12)</td>
+  </tr>
+  <tr>
+    <td style="font-weight:bold;">2 <small>(Poco Prob.)</small></td>
+    <td style="background-color:#8BC34A; color:black; border:1px solid #333; padding:10px;"><b>BASSO</b><br>(2)</td>
+    <td style="background-color:#FFEB3B; color:black; border:1px solid #333; padding:10px;"><b>MEDIO</b><br>(4)</td>
+    <td style="background-color:#FF9800; color:white; border:1px solid #333; padding:10px;"><b>MED-ALTO</b><br>(6)</td>
+    <td style="background-color:#FF9800; color:white; border:1px solid #333; padding:10px;"><b>MED-ALTO</b><br>(8)</td>
+  </tr>
+  <tr>
+    <td style="font-weight:bold;">1 <small>(Improbabile)</small></td>
+    <td style="background-color:#8BC34A; color:black; border:1px solid #333; padding:10px;"><b>BASSO</b><br>(1)</td>
+    <td style="background-color:#8BC34A; color:black; border:1px solid #333; padding:10px;"><b>BASSO</b><br>(2)</td>
+    <td style="background-color:#FFEB3B; color:black; border:1px solid #333; padding:10px;"><b>MEDIO</b><br>(3)</td>
+    <td style="background-color:#FFEB3B; color:black; border:1px solid #333; padding:10px;"><b>MEDIO</b><br>(4)</td>
+  </tr>
+  <tr>
+    <td style="border:none;"></td>
+    <td style="border:none;"></td>
+    <td colspan="4" style="font-weight:bold; padding-top:5px;">DANNO (IMPATTO)</td>
+  </tr>
+</table>
+<br>
 
-> **Legenda Colori:**
-> * 🟩 **Verde (R < 4):** Rischio accettabile. Monitorare.
-> * 🟨 **Giallo (4 ≤ R < 8):** Rischio da ridurre. Programmare interventi.
-> * 🟧 **Arancione (8 ≤ R < 12):** Rischio alto. Intervento urgente.
-> * 🟥 **Rosso (R ≥ 12):** Rischio inaccettabile. Sospendere l'attività finché non si mette in sicurezza.
+> **Legenda Azioni:**
+> * <span style="color:#8BC34A">■</span> **Verde (Basso):** Rischio accettabile. Nessuna azione immediata.
+> * <span style="color:#FFEB3B">■</span> **Giallo (Medio):** Rischio da monitorare. Programmare miglioramenti.
+> * <span style="color:#FF9800">■</span> **Arancione (Medio-Alto):** Intervento correttivo necessario a breve termine.
+> * <span style="color:#FF3D00">■</span> **Rosso (Alto):** Pericolo grave. **Sospendere l'attività** o intervenire subito.
 
 ---
 
