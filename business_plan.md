@@ -22,26 +22,46 @@ Ecco lo schema concettuale:
     🔍 CLICCA QUI PER UN ESEMPIO PRATICO (ElectroTech S.p.A.)
   </summary>
   
-  <div style="background-color: #f1f1f1; padding: 20px; border-left: 5px solid #007bff; margin-top: 10px;">
-    <h3>Scenario: Nuova Divisione "Fotovoltaico"</h3>
+  <div style="background-color: #f8f9fa; padding: 15px; border: 1px solid #dee2e6; margin-top: 10px; border-radius: 5px;">
+    <h3 style="margin-top:0;">Scenario: Nuova Divisione "Fotovoltaico"</h3>
     <p>La nostra azienda vuole lanciare un servizio di installazione pannelli solari.</p>
     
-    <ul>
-      <li><strong>Strengths (Forza):</strong> Abbiamo elettricisti già certificati internamente.</li>
-      <li><strong>Weaknesses (Debolezze):</strong> Non abbiamo furgoni attrezzati per i tetti.</li>
-      <li><strong>Opportunities (Opportunità):</strong> Il Governo ha lanciato il "Bonus Green".</li>
-      <li><strong>Threats (Minacce):</strong> Concorrenza aggressiva di aziende cinesi low-cost.</li>
-    </ul>
+    <table style="width: 100%; border-collapse: separate; border-spacing: 5px;">
+      <tr>
+        <td style="background-color: #d4edda; padding: 10px; border-radius: 5px; width: 50%; vertical-align: top;">
+          <strong>✅ STRENGTHS (Forza)</strong><br>
+          Abbiamo elettricisti già certificati internamente.
+        </td>
+        <td style="background-color: #f8d7da; padding: 10px; border-radius: 5px; width: 50%; vertical-align: top;">
+          <strong>❌ WEAKNESSES (Debolezze)</strong><br>
+          Non abbiamo furgoni attrezzati per i tetti.
+        </td>
+      </tr>
+      <tr>
+        <td style="background-color: #d1ecf1; padding: 10px; border-radius: 5px; vertical-align: top;">
+          <strong>🚀 OPPORTUNITIES (Opportunità)</strong><br>
+          Il Governo ha lanciato il "Bonus Green".
+        </td>
+        <td style="background-color: #fff3cd; padding: 10px; border-radius: 5px; vertical-align: top;">
+          <strong>⚠️ THREATS (Minacce)</strong><br>
+          Concorrenza aggressiva di aziende low-cost.
+        </td>
+      </tr>
+    </table>
 
-    <hr>
-    <strong>Strategia Risultante:</strong> Sfruttiamo i tecnici interni (S) per cogliere il Bonus (O), ma dobbiamo investire subito nei furgoni (W) per battere la concorrenza (T).
+    <hr style="margin: 15px 0;">
+    
+    <div style="background-color: #e2e6ea; padding: 10px; border-radius: 5px; border-left: 5px solid #007bff;">
+      <strong>🎯 Strategia Risultante:</strong> <br>
+      Sfruttiamo i tecnici interni (S) per cogliere il Bonus (O), ma dobbiamo investire subito nei furgoni (W) per battere la concorrenza (T).
+    </div>
   </div>
 </details>
 
 ---
 
 ## 3. La Struttura del Business Plan
-Il documento completo si divide in due parti:
+Il documento completo si divide in **almeno** due parti:
 
 ### A) Parte Descrittiva (Qualitativa)
 1.  **Executive Summary:** Sintesi per gli investitori.
