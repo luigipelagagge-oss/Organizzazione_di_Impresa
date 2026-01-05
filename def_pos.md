@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # 🏗️ P.O.S. (Piano Operativo di Sicurezza)
 
 È il documento operativo di dettaglio, obbligatorio **solo nei cantieri temporanei o mobili**.
@@ -17,4 +13,4 @@ layout: default
     * I DPI specifici per quelle lavorazioni.
     * I nomi dei lavoratori presenti in cantiere.
 
-[🔙 Torna all'Organigramma](ud4.html)
+[🔙 Torna all'Organigramma](ud4.md)
