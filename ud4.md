@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
 
 ## 1. Il Riferimento Legislativo
@@ -62,24 +58,24 @@ graph TD
     end
 
     %% ==========================================
-    %%   INTERAZIONI (LINK FILE HTML)
+    %%   INTERAZIONI (RIPRISTINATI LINK .md)
     %% ==========================================
     
     %% --- PERSONE ---
-    click DL "def_datore.html" "Apri scheda: Datore"
-    click DIR "def_dirigente.html" "Apri scheda: Dirigente"
-    click PRE "def_preposto.html" "Apri scheda: Preposto"
-    click LAV "def_lavoratore.html" "Apri scheda: Lavoratore"
+    click DL "def_datore.md" "Apri scheda: Datore"
+    click DIR "def_dirigente.md" "Apri scheda: Dirigente"
+    click PRE "def_preposto.md" "Apri scheda: Preposto"
+    click LAV "def_lavoratore.md" "Apri scheda: Lavoratore"
     
     %% --- STAFF ---
-    click RSPP "def_rspp.html" "Apri scheda: RSPP"
-    click MC "def_medico.html" "Apri scheda: Medico"
-    click RLS "def_rls.html" "Apri scheda: RLS"
+    click RSPP "def_rspp.md" "Apri scheda: RSPP"
+    click MC "def_medico.md" "Apri scheda: Medico"
+    click RLS "def_rls.md" "Apri scheda: RLS"
 
     %% --- DOCUMENTI ---
-    click NORMA "def_norme.html" "Apri scheda: Normativa"
-    click DVR "def_dvr.html" "Apri scheda: DVR"
-    click POS "def_pos.html" "Apri scheda: POS"
+    click NORMA "def_norme.md" "Apri scheda: Normativa"
+    click DVR "def_dvr.md" "Apri scheda: DVR"
+    click POS "def_pos.md" "Apri scheda: POS"
     
     %% ==========================================
     %%   STILI
