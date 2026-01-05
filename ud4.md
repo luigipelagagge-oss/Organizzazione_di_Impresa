@@ -58,7 +58,7 @@ graph TD
     end
 
     %% ==========================================
-    %%   INTERAZIONI (RIPRISTINATI LINK .md)
+    %%   INTERAZIONI (LINK FILE .md)
     %% ==========================================
     
     %% --- PERSONE ---
