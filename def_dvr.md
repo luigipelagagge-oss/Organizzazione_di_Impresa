@@ -4,18 +4,18 @@ Il DVR è il documento **più importante** per la sicurezza. Non è un semplice 
 
 ---
 
-## 1. Il Metodo di Valutazione (R = P x D)
-Per valutare un rischio non si va "a sensazione". La legge impone un metodo scientifico basato su una formula matematica precisa:
+## 1. Il Metodo di Valutazione (R = P × D)
+Per valutare un rischio non si va "a sensazione". La legge impone un metodo scientifico basato su una formula precisa:
 
-$$R = P \times D$$
+> ### **R = P × D**
 
 Dove:
 * **P = Probabilità:** Quanto è probabile che l'evento accada? (Scala 1-4).
-* **D = Danno (Impatto):** Se l'evento accade, quanto male ci si fa? (Scala 1-4).
+* **D = Danno:** Se l'evento accade, quanto male ci si fa? (Scala 1-4).
 * **R = Rischio:** Il numero finale che indica l'urgenza dell'intervento.
 
 ### 🔢 La Matrice del Rischio
-Ecco la visualizzazione grafica del livello di rischio:
+Ecco la visualizzazione grafica che incrocia Probabilità e Danno:
 
 <img src="ValutazioneRischi.jpg" alt="Matrice Rischio" width="600" style="display: block; margin: 0 auto;">
 <br>
@@ -29,7 +29,7 @@ Ecco la visualizzazione grafica del livello di rischio:
 ---
 
 ## 2. Le Misure di Prevenzione e Protezione
-Una volta calcolato il rischio (R), il Datore di Lavoro deve intervenire per abbassarlo.
+Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per abbassarlo.
 
 1.  **Prevenzione:** Azioni per abbassare la **Probabilità** (es. formazione, manutenzione macchine).
 2.  **Protezione:** Azioni per abbassare il **Danno** (es. uso dei DPI come caschi e scarpe, barriere fisiche).
