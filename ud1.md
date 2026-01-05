@@ -1,4 +1,4 @@
- # U.D. 4.1 – L’Azienda e il Sistema Integrato
+ # 4.1 L’Azienda e il Sistema Integrato
 
 ## 1. L'Azienda come Sistema Complesso
 Non possiamo vedere l'azienda solo come "produzione di beni". Oggi un'azienda moderna è un sistema di processi interconnessi.
@@ -26,13 +26,16 @@ graph TD
     end
 
     %% --- DIRIGENZA ---
+    %% Definiti in ordine per forzare il posizionamento da sx a dx
     DTEC["DIRETTORE TECNICO"]:::manager
     DAMM["DIR. AMMINISTRATIVO"]:::manager
     DCOM["DIR. COMMERCIALE"]:::manager
+    DHR["DIR. RISORSE UMANE<br>(HR)"]:::manager
 
     %% --- REPARTI E UFFICI ---
     ACQ["Ufficio Acquisti"]:::office
     MKT["Vendite & Marketing"]:::office
+    UPERS["Ufficio Personale<br>& Formazione"]:::office
     
     CPROD["CAPO REPARTO<br>(Produzione)"]:::super
     CMAN["CAPO MANUTENZIONE"]:::super
@@ -42,12 +45,16 @@ graph TD
     OP2["Tecnici Manutentori"]:::worker
 
     %% --- COLLEGAMENTI GERARCHICI ---
+    %% L'ordine qui determina la posizione sinistra-destra
     DL ==> DTEC
     DL ==> DAMM
     DL ==> DCOM
+    DL ==> DHR
 
+    %% Sottorami
     DAMM --> ACQ
     DCOM --> MKT
+    DHR --> UPERS
 
     DTEC ==> CPROD
     DTEC ==> CMAN
@@ -59,6 +66,7 @@ graph TD
     DL -.-> SGI
     SGI -.->|Procedure e Controlli| DTEC
     SGI -.->|Audit| DAMM
+    SGI -.->|Formazione Obbligatoria| DHR
 
     %% --- LINK INTERATTIVI (TUTTI ATTIVI) ---
     
@@ -70,12 +78,13 @@ graph TD
     %% 2. Datore di Lavoro
     click DL "#/def_datore" "Apri Ruolo Datore"
 
-    %% 3. Dirigenti (Tutti vanno alla scheda Dirigente)
+    %% 3. Dirigenti
     click DTEC "#/def_dirigente" "Apri Ruolo Dirigente"
     click DAMM "#/def_dirigente" "Apri Ruolo Dirigente"
     click DCOM "#/def_dirigente" "Apri Ruolo Dirigente"
+    click DHR "#/def_dirigente" "Apri Ruolo Dirigente"
 
-    %% 4. Preposti (Tutti vanno alla scheda Preposto)
+    %% 4. Preposti
     click CPROD "#/def_preposto" "Apri Ruolo Preposto"
     click CMAN "#/def_preposto" "Apri Ruolo Preposto"
 
