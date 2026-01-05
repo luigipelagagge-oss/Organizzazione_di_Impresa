@@ -55,7 +55,6 @@ Concorrenza aggressiva di aziende low-cost.
 <strong>🎯 Strategia Risultante</strong><br>
 Sfruttiamo i tecnici interni (S) per cogliere il Bonus (O), ma dobbiamo investire subito nei furgoni (W) per battere la concorrenza (T).
 </div>
-
 </div>
 </details>
 
@@ -67,3 +66,69 @@ Sfruttiamo i tecnici interni (S) per cogliere il Bonus (O), ma dobbiamo investir
 <div style="background-color: #f8f9fa; padding: 15px; border: 1px solid #dee2e6; margin-top: 10px; border-radius: 5px;">
 <h3 style="margin-top:0;">Scenario Complesso: Ingresso nel mercato "Smart Home"</h3>
 <p>L'azienda valuta se evolversi integrando l'elettronica con l'informatica (IoT). La situazione è rischiosa.</p>
+
+<table style="width: 100%; border-collapse: separate; border-spacing: 5px;">
+<tr>
+<td style="background-color: #d4edda; padding: 10px; border-radius: 5px; width: 50%; vertical-align: top;">
+<strong>✅ STRENGTHS (Forza)</strong>
+<ul style="margin: 5px 0 0 20px; padding: 0;">
+<li>Brand storico e affidabile (25 anni).</li>
+<li>Ottima liquidità finanziaria (soldi in cassa).</li>
+<li>Clienti industriali molto fedeli.</li>
+</ul>
+</td>
+<td style="background-color: #f8d7da; padding: 10px; border-radius: 5px; width: 50%; vertical-align: top;">
+<strong>❌ WEAKNESSES (Debolezze)</strong>
+<ul style="margin: 5px 0 0 20px; padding: 0;">
+<li><strong>Mancanza di competenze informatiche/SW.</strong></li>
+<li>Personale tecnico resistente al cambiamento.</li>
+<li>Marketing digitale inesistente.</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td style="background-color: #d1ecf1; padding: 10px; border-radius: 5px; vertical-align: top;">
+<strong>🚀 OPPORTUNITIES (Opportunità)</strong>
+<ul style="margin: 5px 0 0 20px; padding: 0;">
+<li>Fondi PNRR per la digitalizzazione 4.0.</li>
+<li>Mercato Domotica in crescita (+30%).</li>
+<li>Richiesta di impianti "intelligenti".</li>
+</ul>
+</td>
+<td style="background-color: #fff3cd; padding: 10px; border-radius: 5px; vertical-align: top;">
+<strong>⚠️ THREATS (Minacce)</strong>
+<ul style="margin: 5px 0 0 20px; padding: 0;">
+<li>Ingresso di colossi (Google, Amazon).</li>
+<li>Normative Cybersecurity complesse.</li>
+<li>Difficoltà a trovare programmatori.</li>
+</ul>
+</td>
+</tr>
+</table>
+
+<br>
+
+<div style="background-color: #e2e6ea; padding: 15px; border-left: 5px solid #6c757d; border-radius: 4px;">
+<strong>🤔 Analisi Strategica (Trade-off)</strong><br>
+Abbiamo i soldi (S) ma non le competenze (W).<br>
+<strong>Decisione:</strong> Usiamo la liquidità (S) per <strong>acquisire una piccola startup informatica</strong> o fare una Joint Venture. Questo risolve la debolezza tecnologica (W) subito e ci permette di prendere i fondi PNRR (O) prima che i big player dominino il mercato (T).
+</div>
+</div>
+</details>
+
+---
+
+## 3. La Struttura del Business Plan
+Il documento completo si divide in **almeno** due parti:
+
+### A) Parte Descrittiva (Qualitativa)
+1.  **Executive Summary:** Sintesi per gli investitori.
+2.  **L'Impresa:** Chi siamo (Storia, Soci, Organigramma).
+3.  **Mercato:** Analisi dei clienti e concorrenti.
+4.  **Marketing Mix:** Le 4P (Prodotto, Prezzo, Posto, Promozione).
+5.  **Piano Operativo:** Risorse umane e tecnologie necessarie.
+
+### B) Parte Economico-Finanziaria (Quantitativa)
+1.  **Piano degli Investimenti:** Spese di avvio (Start-up).
+2.  **Conto Economico:** Ricavi previsti - Costi previsti = **Utile**.
+3.  **Break Even Point (B.E.P.):** Il punto di pareggio (quando i ricavi iniziano a superare i costi).
