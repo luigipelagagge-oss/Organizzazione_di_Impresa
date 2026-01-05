@@ -16,18 +16,18 @@ Ecco la matrice grafica della nostra azienda:
 ```mermaid
 graph TB
     %% --- DEFINIZIONE DELLA GRIGLIA ---
-    subgraph MATRICE_SWOT [ ]
+    subgraph MATRICE_SWOT ["MATRICE SWOT"]
         direction TB
         
-        %% RIGA 1: FATTORI INTERNI
-        subgraph INTERNI [FATTORI INTERNI (Dipendono da noi)]
+        %% RIGA 1: FATTORI INTERNI (Nota le virgolette aggiunte nel titolo)
+        subgraph INTERNI ["FATTORI INTERNI (Dipendono da noi)"]
             direction LR
             S["STRENGTHS<br>(Punti di Forza)<br><br>✅ Personale Qualificato<br>✅ Brevetti<br>✅ Buon Brand"]:::pos
             W["WEAKNESSES<br>(Debolezze)<br><br>❌ Pochi soldi<br>❌ Macchinari vecchi<br>❌ Marketing assente"]:::neg
         end
 
-        %% RIGA 2: FATTORI ESTERNI
-        subgraph ESTERNI [FATTORI ESTERNI (Dipendono dal Mercato)]
+        %% RIGA 2: FATTORI ESTERNI (Nota le virgolette aggiunte nel titolo)
+        subgraph ESTERNI ["FATTORI ESTERNI (Dipendono dal Mercato)"]
             direction LR
             O["OPPORTUNITIES<br>(Opportunità)<br><br>🚀 Incentivi Statali<br>🚀 Nuove Tecnologie<br>🚀 Fallimento concorrente"]:::pos
             T["THREATS<br>(Minacce)<br><br>⚠️ Tasse in aumento<br>⚠️ Crisi Economica<br>⚠️ Burocrazia lenta"]:::neg
