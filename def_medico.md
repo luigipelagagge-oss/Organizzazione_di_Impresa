@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Il Medico Competente
 > **Definizione (Art. 2):** Medico in possesso di titoli e requisiti specifici [...] che collabora con il datore di lavoro ai fini della valutazione dei rischi ed è nominato dallo stesso per effettuare la sorveglianza sanitaria.
 
@@ -18,4 +22,4 @@ Al termine della visita, il Medico deve emettere uno di questi giudizi:
 4.  **NON IDONEO PERMANENTE:** Non può più svolgere quella mansione.
 
 ---
-[🔙 Torna all'Organigramma](ud4.md)
+[🔙 Torna all'Organigramma](ud4.html)
