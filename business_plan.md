@@ -19,12 +19,12 @@ Ecco lo schema concettuale:
 
 <details>
 <summary style="background-color: #007bff; color: white; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; list-style: none;">
-🔍 CLICCA QUI PER UN ESEMPIO PRATICO (ElectroTech S.p.A.)
+🔍 ESEMPIO BASE: Nuova Divisione "Fotovoltaico"
 </summary>
 
 <div style="background-color: #f8f9fa; padding: 15px; border: 1px solid #dee2e6; margin-top: 10px; border-radius: 5px;">
-<h3 style="margin-top:0;">Scenario: Nuova Divisione "Fotovoltaico"</h3>
-<p>La nostra azienda vuole lanciare un servizio di installazione pannelli solari.</p>
+<h3 style="margin-top:0;">Scenario: Installazione Pannelli Solari</h3>
+<p>L'azienda vuole sfruttare il momento favorevole delle energie rinnovabili.</p>
 
 <table style="width: 100%; border-collapse: separate; border-spacing: 5px;">
 <tr>
@@ -59,19 +59,11 @@ Sfruttiamo i tecnici interni (S) per cogliere il Bonus (O), ma dobbiamo investir
 </div>
 </details>
 
----
+<details>
+<summary style="background-color: #6c757d; color: white; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; list-style: none; margin-top: 15px;">
+📈 ESEMPIO AVANZATO: Svolta Digitale (Domotica)
+</summary>
 
-## 3. La Struttura del Business Plan
-Il documento completo si divide in **almeno** due parti:
-
-### A) Parte Descrittiva (Qualitativa)
-1.  **Executive Summary:** Sintesi per gli investitori.
-2.  **L'Impresa:** Chi siamo (Storia, Soci, Organigramma).
-3.  **Mercato:** Analisi dei clienti e concorrenti.
-4.  **Marketing Mix:** Le 4P (Prodotto, Prezzo, Posto, Promozione).
-5.  **Piano Operativo:** Risorse umane e tecnologie necessarie.
-
-### B) Parte Economico-Finanziaria (Quantitativa)
-1.  **Piano degli Investimenti:** Spese di avvio (Start-up).
-2.  **Conto Economico:** Ricavi previsti - Costi previsti = **Utile**.
-3.  **Break Even Point (B.E.P.):** Il punto di pareggio (quando i ricavi iniziano a superare i costi).
+<div style="background-color: #f8f9fa; padding: 15px; border: 1px solid #dee2e6; margin-top: 10px; border-radius: 5px;">
+<h3 style="margin-top:0;">Scenario Complesso: Ingresso nel mercato "Smart Home"</h3>
+<p>L'azienda valuta se evolversi integrando l'elettronica con l'informatica (IoT). La situazione è rischiosa.</p>
