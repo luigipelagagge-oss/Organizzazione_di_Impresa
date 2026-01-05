@@ -4,7 +4,7 @@
 Il Business Plan è il documento strategico che definisce il progetto imprenditoriale. 
 Non è solo un "foglio di calcolo", ma il biglietto da visita dell'azienda verso banche e investitori per ottenere finanziamenti.
 
-> **Definizione per l'Esame:** > È un documento che sintetizza i contenuti e le caratteristiche di un progetto imprenditoriale (nuova impresa o espansione), pianificandone le strategie e valutandone i risultati attesi nel medio periodo (3-5 anni).
+> **Definizione per l'Esame:** È un documento che sintetizza i contenuti e le caratteristiche di un progetto imprenditoriale (nuova impresa o espansione), pianificandone le strategie e valutandone i risultati attesi nel medio periodo (3-5 anni).
 
 ---
 
@@ -39,21 +39,21 @@ Prima di scrivere il piano, l'imprenditore usa la matrice SWOT per analizzare la
 
 ```mermaid
 graph TD
-    SWOT[ANALISI SWOT]:::center
+    SWOT["ANALISI SWOT"]:::center
     
-    INT[Fattori INTERNI<br>(Dipendono da noi)]:::internal
-    EXT[Fattori ESTERNI<br>(Dipendono dal mercato)]:::external
+    INT["Fattori INTERNI<br>(Dipendono da noi)"]:::internal
+    EXT["Fattori ESTERNI<br>(Dipendono dal mercato)"]:::external
     
-    S[Strengths<br>PUNTI DI FORZA]:::good
-    W[Weaknesses<br>PUNTI DI DEBOLEZZA]:::bad
-    O[Opportunities<br>OPPORTUNITÀ]:::good
-    T[Threats<br>MINACCE]:::bad
+    S["Strengths<br>PUNTI DI FORZA"]:::good
+    W["Weaknesses<br>PUNTI DI DEBOLEZZA"]:::bad
+    O["Opportunities<br>OPPORTUNITÀ"]:::good
+    T["Threats<br>MINACCE"]:::bad
     
     %% Esempi Pratici nel grafo
-    EX_S[Es: Brevetto esclusivo<br>Personale qualificato]:::note
-    EX_W[Es: Scarsa liquidità<br>Brand sconosciuto]:::note
-    EX_O[Es: Incentivi statali 4.0<br>Fallimento concorrente]:::note
-    EX_T[Es: Nuove tasse<br>Crisi economica]:::note
+    EX_S["Es: Brevetto esclusivo<br>Personale qualificato"]:::note
+    EX_W["Es: Scarsa liquidità<br>Brand sconosciuto"]:::note
+    EX_O["Es: Incentivi statali 4.0<br>Fallimento concorrente"]:::note
+    EX_T["Es: Nuove tasse<br>Crisi economica"]:::note
 
     SWOT --> INT
     SWOT --> EXT
