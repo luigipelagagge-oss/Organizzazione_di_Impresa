@@ -1,8 +1,9 @@
- # 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
+# 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
 
 ## 1. Il Riferimento Legislativo
 La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 81/08)**.
 Tutte le figure aziendali devono rispettare quanto stabilito nella fonte ufficiale:
+
 🔗 **[Consulta il D.Lgs 81/08 sulla Gazzetta Ufficiale della Repubblica Italiana](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s)**
 
 ---
@@ -22,7 +23,7 @@ Prima di analizzare i ruoli, è fondamentale capire la logica della legge che di
 ## 3. L'Organizzazione (Mappa Interattiva)
 La sicurezza si basa su **Persone** (chi ha le responsabilità) e **Documenti** (cosa bisogna scrivere).
 
-> **Istruzione:** Clicca sulle caselle per aprire la pagina ufficiale dell'Ente di riferimento (INAIL, Ministero, Gazzetta).
+> **Istruzione:** Clicca sulle caselle per aprire le schede di dettaglio o i siti ufficiali.
 
 ```mermaid
 graph TD
@@ -72,32 +73,27 @@ graph TD
     end
 
     %% ==========================================
-    %%   INTERAZIONI (LINK A ENTI UFFICIALI)
+    %%   INTERAZIONI E LINK
     %% ==========================================
     
-    %% DATORE DI LAVORO -> Ministero del Lavoro (FAQ Sicurezza)
-    click DL "[https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza)" "Ministero del Lavoro: Salute e Sicurezza"
-    
-    %% PREPOSTO E DIRIGENTE -> Ispettorato Nazionale del Lavoro
-    click DIR "[https://www.ispettorato.gov.it/](https://www.ispettorato.gov.it/)" "Ispettorato Nazionale del Lavoro"
-    click PRE "[https://www.ispettorato.gov.it/](https://www.ispettorato.gov.it/)" "Ispettorato Nazionale del Lavoro"
-    
-    %% LAVORATORE -> INAIL (Opuscolo Lavoratori)
-    click LAV "[https://www.inail.it/cs/internet/attivita/prevenzione.html](https://www.inail.it/cs/internet/attivita/prevenzione.html)" "INAIL: Sezione Prevenzione"
+    %% --- PERSONE (Link istituzionali o interni) ---
+    click DL "[https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza)" "Ministero del Lavoro"
+    click DIR "[https://www.ispettorato.gov.it/](https://www.ispettorato.gov.it/)" "Ispettorato Nazionale"
+    click PRE "[https://www.ispettorato.gov.it/](https://www.ispettorato.gov.it/)" "Ispettorato Nazionale"
+    click LAV "[https://www.inail.it/cs/internet/attivita/prevenzione.html](https://www.inail.it/cs/internet/attivita/prevenzione.html)" "INAIL Prevenzione"
+    click RSPP "[https://www.inail.it/cs/internet/attivita/prevenzione/gestione-salute-sicurezza.html](https://www.inail.it/cs/internet/attivita/prevenzione/gestione-salute-sicurezza.html)" "INAIL Gestione Sicurezza"
+    click MC "[https://www.salute.gov.it/portale/temi/p2_6.jsp?id=1302&area=sicurezzaLavoro&menu=medico](https://www.salute.gov.it/portale/temi/p2_6.jsp?id=1302&area=sicurezzaLavoro&menu=medico)" "Ministero Salute"
+    click RLS "[https://www.inail.it/cs/internet/attivita/prevenzione/formazione/rls.html](https://www.inail.it/cs/internet/attivita/prevenzione/formazione/rls.html)" "INAIL RLS"
 
-    %% RSPP -> INAIL (Gestione Sicurezza)
-    click RSPP "[https://www.inail.it/cs/internet/attivita/prevenzione/gestione-salute-sicurezza.html](https://www.inail.it/cs/internet/attivita/prevenzione/gestione-salute-sicurezza.html)" "INAIL: Gestione Salute e Sicurezza"
+    %% --- DOCUMENTI (Link Ripristinati) ---
+    %% NORMA -> Gazzetta Ufficiale (Resta esterno perché è la fonte)
+    click NORMA "[https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s)" "Apri Gazzetta Ufficiale"
     
-    %% MEDICO -> Ministero della Salute
-    click MC "[https://www.salute.gov.it/portale/temi/p2_6.jsp?id=1302&area=sicurezzaLavoro&menu=medico](https://www.salute.gov.it/portale/temi/p2_6.jsp?id=1302&area=sicurezzaLavoro&menu=medico)" "Ministero della Salute: Medico Competente"
+    %% DVR -> Scheda Interna (Ripristinato)
+    click DVR "#/def_dvr" "Vai alla scheda DVR"
     
-    %% RLS -> INAIL (RLS)
-    click RLS "[https://www.inail.it/cs/internet/attivita/prevenzione/formazione/rls.html](https://www.inail.it/cs/internet/attivita/prevenzione/formazione/rls.html)" "INAIL: Il Rappresentante dei Lavoratori"
-
-    %% DOCUMENTI -> GAZZETTA UFFICIALE / MINISTERO
-    click NORMA "[https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s)" "Gazzetta Ufficiale: Testo Unico"
-    click DVR "[https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza/focus-on/valutazione-dei-rischi/Pagine/default.aspx](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza/focus-on/valutazione-dei-rischi/Pagine/default.aspx)" "Ministero del Lavoro: Valutazione Rischi"
-    click POS "[https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza)" "Ministero del Lavoro: Cantieri"
+    %% POS -> Scheda Interna (Ripristinato)
+    click POS "#/def_pos" "Vai alla scheda POS"
 
     %% ==========================================
     %%   STILI (CSS)
