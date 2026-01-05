@@ -1,79 +1,86 @@
  # 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
 
-La sicurezza in azienda si regge su due pilastri fondamentali: le **Figure Responsabili** (chi gestisce la sicurezza) e i **Documenti Obbligatori** (dove sono scritti i rischi e le misure).
+La sicurezza in azienda si regge su due pilastri fondamentali: le **Figure Responsabili** (chi gestisce la sicurezza) e i **Documenti Obbligatori** (cosa bisogna produrre).
 
 ---
 
-<div style="display: flex; flex-wrap: wrap; gap: 20px;">
+## La Mappa Completa: Persone e Documenti
+> **Istruzione:** Clicca sulle caselle per aprire la **Scheda di Dettaglio** o scorrere alla definizione.
 
-<div style="flex: 1; min-width: 300px; border-right: 1px solid #ddd; padding-right: 15px;">
+```mermaid
+graph TD
+    %% ==========================================
+    %%  SUBGRAPH 1: LE PERSONE (SINISTRA)
+    %% ==========================================
+    subgraph "👥 L'ORGANIGRAMMA (Chi fa cosa)"
+        direction TB
+        %% --- NODI PERSONE ---
+        DL["DATORE DI LAVORO<br>(Il Decisore)"]:::boss
+        DIR["DIRIGENTE<br>(L'Organizzatore)"]:::man
+        PRE["PREPOSTO<br>(Il Controllore)"]:::man
+        LAV["LAVORATORE<br>(L'Esecutore)"]:::worker
 
-## 👥 1. Le Persone (Organigramma)
-Chi sono i soggetti coinvolti nella sicurezza aziendale?
+        %% --- STAFF ---
+        RSPP["RSPP<br>(Consulente)"]:::staff
+        MC["MEDICO COMP.<br>(Sanitario)"]:::staff
+        RLS["RLS<br>(Rappresentante)"]:::rep
 
-* **[Datore di Lavoro](def_datore.md)**
-    * *Il responsabile supremo (Civile e Penale).*
-* **[RSPP](def_rspp.md)**
-    * *Resp. Servizio Prevenzione e Protezione (Il tecnico).*
-* **[RLS](def_rls.md)**
-    * *Rappresentante dei Lavoratori (Il sindacato interno).*
-* **[Medico Competente](def_medico.md)**
-    * *Sorveglianza sanitaria.*
-* **[Preposto](def_preposto.md)**
-    * *Il "capo" che controlla sul campo.*
-* **[Lavoratori](def_lavoratore.md)**
-    * *Hanno l'obbligo di seguire le regole.*
+        %% --- COLLEGAMENTI GERARCHICI ---
+        DL ==>|Delega| DIR
+        DIR ==>|Organizza| PRE
+        PRE ==>|Vigila| LAV
 
-</div>
+        %% --- COLLEGAMENTI FUNZIONALI ---
+        DL -.->|Nomina| RSPP
+        DL -.->|Nomina| MC
+        RSPP -.->|Consiglia| DL
+        MC -.->|Visita| LAV
+        LAV -.->|Elegge| RLS
+        RLS -.->|Consulta| DL
+    end
 
-<div style="flex: 1; min-width: 300px; background-color: #f9f9f9; padding: 15px; border-radius: 8px;">
+    %% ==========================================
+    %%  SUBGRAPH 2: I DOCUMENTI (DESTRA)
+    %% ==========================================
+    subgraph "📄 I DOCUMENTI (Cosa serve)"
+        direction TB
+        %% --- NODI DOCUMENTI ---
+        NORMA("⚖️ D.Lgs 81/08<br>(La Legge)"):::doc_law
+        DVR("⚠️ D.V.R.<br>(Valutazione Rischi)"):::doc_dvr
+        POS("🏗️ P.O.S.<br>(Piano Operativo)"):::doc_pos
 
-## 📄 2. I Documenti (Gerarchia)
-Il flusso logico della documentazione di sicurezza.
+        %% --- FLUSSO ---
+        NORMA ==>|Impone| DVR
+        DVR ==>|Genera (per cantieri)| POS
+    end
 
-<div style="text-align: center; font-family: sans-serif;">
+    %% ==========================================
+    %%  INTERAZIONI (LINK)
+    %% ==========================================
+    %% Link Persone
+    click DL "#/def_datore" "Vai alla scheda Datore"
+    click DIR "#/def_dirigente" "Vai alla scheda Dirigente"
+    click PRE "#/def_preposto" "Vai alla scheda Preposto"
+    click LAV "#/def_lavoratore" "Vai alla scheda Lavoratore"
+    click RSPP "#/def_rspp" "Vai alla scheda RSPP"
+    click MC "#/def_medico" "Vai alla scheda Medico"
+    click RLS "#/def_rls" "Vai alla scheda RLS"
 
-  <a href="https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg" target="_blank" style="text-decoration: none;">
-    <div style="background-color: #2c3e50; color: white; padding: 10px; border-radius: 5px; margin-bottom: 5px; font-weight: bold;">
-      🏛️ NORMATIVA (D.Lgs 81/08)
-    </div>
-  </a>
-  <small><i>Definisce gli obblighi di legge</i></small>
-  
-  <div style="font-size: 24px; color: #555;">⬇️</div>
+    %% Link Documenti (Puntano alle ancore in fondo alla pagina o link esterni)
+    click NORMA "[https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/sg)" "Apri Gazzetta Ufficiale"
+    click DVR "#/ud4?id=dvr-documento-valutazione-rischi" "Leggi definizione DVR"
+    click POS "#/ud4?id=pos-piano-operativo-di-sicurezza" "Leggi definizione POS"
 
-  <a href="#/ud4?id=dvr-documento-valutazione-rischi" style="text-decoration: none;">
-    <div style="background-color: #e67e22; color: white; padding: 10px; border-radius: 5px; margin-bottom: 5px; font-weight: bold; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-      ⚠️ D.V.R. (Valutazione Rischi)
-    </div>
-  </a>
-  <small><i>Analisi di TUTTI i rischi in azienda</i></small>
-
-  <div style="font-size: 24px; color: #555;">⬇️</div>
-
-  <a href="#/ud4?id=pos-piano-operativo-di-sicurezza" style="text-decoration: none;">
-    <div style="background-color: #27ae60; color: white; padding: 10px; border-radius: 5px; margin-bottom: 5px; font-weight: bold; box-shadow: 2px 2px 5px rgba(0,0,0,0.2);">
-      🏗️ P.O.S. (Piano Operativo)
-    </div>
-  </a>
-  <small><i>Specifico per i cantieri temporanei</i></small>
-
-</div>
-</div>
-
-</div>
----
-
-## Approfondimento Documentale
-
-### ⚠️ D.V.R. (Documento Valutazione Rischi)
-È il documento **più importante**. È la "fotografia" della sicurezza in azienda.
-* **Chi lo redige?** Il Datore di Lavoro (non delegabile) con l'aiuto dell'RSPP e del Medico Competente, previa consultazione dell'RLS.
-* **Cosa contiene?** L'elenco di tutti i rischi presenti (elettrico, chimico, rumore, stress, etc.), la valutazione della loro gravità e le misure di prevenzione da adottare.
-* **Quando si fa?** All'apertura dell'attività e va aggiornato a ogni modifica del processo produttivo o dopo infortuni significativi.
-
-### 🏗️ P.O.S. (Piano Operativo di Sicurezza)
-È il documento operativo di dettaglio, obbligatorio nei **cantieri**.
-* **Chi lo redige?** Il Datore di Lavoro dell'impresa esecutrice che entra in un cantiere.
-* **Differenza col DVR:** Il DVR guarda l'azienda in generale (es. la sede), il POS guarda lo specifico cantiere (es. "Lavori di ristrutturazione in Via Roma 1").
-* **Cosa contiene?** Le macchine usate in *quel* cantiere, i DPI specifici per *quel* lavoro, i nomi degli addetti presenti in *quel* cantiere.
+    %% ==========================================
+    %%  STILI (CLASSI CSS)
+    %% ==========================================
+    classDef boss fill:#000,color:#fff,stroke-width:4px;
+    classDef man fill:#007bff,color:#fff;
+    classDef worker fill:#fff,stroke:#333;
+    classDef staff fill:#6c757d,color:#fff,stroke-dasharray: 5 5;
+    classDef rep fill:#ffc107,color:#000;
+    
+    %% Stili nuovi per i documenti
+    classDef doc_law fill:#2c3e50,color:#fff,stroke:#f1c40f,stroke-width:2px;
+    classDef doc_dvr fill:#e67e22,color:#fff,stroke:#333,stroke-width:2px;
+    classDef doc_pos fill:#27ae60,color:#fff,stroke:#333,stroke-width:2px;
