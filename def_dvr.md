@@ -4,7 +4,7 @@ Il DVR è il documento **più importante** per la sicurezza. Non è un semplice 
 
 ---
 
-## 1. Il Metodo di Valutazione ($R = P \times D$)
+## 1. Il Metodo di Valutazione (R = P x D)
 Per valutare un rischio non si va "a sensazione". La legge impone un metodo scientifico basato su una formula matematica precisa:
 
 $$R = P \times D$$
