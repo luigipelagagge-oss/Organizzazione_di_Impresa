@@ -119,7 +119,7 @@ Abbiamo i soldi (S) ma non le competenze (W).<br>
 ---
 
 ## 3. La Struttura del Business Plan
-Il documento completo si divide in **almeno** due parti:
+Il documento completo si divide in **almeno** due parti.
 
 ### A) Parte Descrittiva (Qualitativa)
 1.  **Executive Summary:** Sintesi per gli investitori.
@@ -129,6 +129,17 @@ Il documento completo si divide in **almeno** due parti:
 5.  **Piano Operativo:** Risorse umane e tecnologie necessarie.
 
 ### B) Parte Economico-Finanziaria (Quantitativa)
-1.  **Piano degli Investimenti:** Spese di avvio (Start-up).
-2.  **Conto Economico:** Ricavi previsti - Costi previsti = **Utile**.
-3.  **Break Even Point (B.E.P.):** Il punto di pareggio (quando i ricavi iniziano a superare i costi).
+Questa sezione traduce le idee in numeri.
+
+#### 1. Piano degli Investimenti
+Le spese di avvio necessarie (Start-up). Ecco un esempio grafico di come si calcolano i costi e gli ammortamenti:
+
+![Tabella Investimenti](tabella_investimenti.svg)
+
+<br>
+
+#### 2. Il Bilancio Previsionale
+Gli altri documenti fondamentali da conoscere sono:
+
+* **[Conto Economico](https://it.wikipedia.org/wiki/Conto_economico "Clicca per leggere la definizione su Wikipedia"):** Ricavi previsti - Costi previsti = **Utile**.
+* **[Break Even Point (B.E.P.)](https://it.wikipedia.org/wiki/Punto_di_pareggio "Clicca per leggere la definizione su Wikipedia"):** Il punto di pareggio, ovvero il momento esatto in cui i ricavi iniziano a superare i costi totali.
