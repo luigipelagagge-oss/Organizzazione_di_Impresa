@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # ⚠️ D.V.R. (Documento Valutazione Rischi)
 
 Il DVR è il documento **più importante** per la sicurezza. Non è un semplice pezzo di carta, ma la "fotografia dinamica" della sicurezza in azienda.
@@ -55,4 +51,4 @@ Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per
 * **Data Certa:**
     Il documento deve avere "Data Certa" (es. PEC, firma digitale) per dimostre legalmente che è stato fatto *prima* di un eventuale infortunio.
 
-[🔙 Torna all'Organigramma](ud4.html)
+[🔙 Torna all'Organigramma](ud4.md)
