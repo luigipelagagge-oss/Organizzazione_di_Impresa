@@ -1,4 +1,9 @@
+---
+layout: default
+---
+
 # 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
+
 ## 1. Il Riferimento Legislativo
 La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 81/08)**.
 
@@ -19,6 +24,8 @@ La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 
 ## 3. L'Organizzazione (Mappa Interattiva)
 
 > **Istruzione:** Clicca sulle caselle per aprire le schede di dettaglio.
+
+<br>
 
 ```mermaid
 graph TD
@@ -55,7 +62,7 @@ graph TD
     end
 
     %% ==========================================
-    %%   INTERAZIONI (LINK AGGIORNATI A .html)
+    %%   INTERAZIONI (LINK FILE HTML)
     %% ==========================================
     
     %% --- PERSONE ---
