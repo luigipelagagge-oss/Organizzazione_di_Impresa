@@ -1,30 +1,19 @@
-# 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
+ # 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
 
 ## 1. Il Riferimento Legislativo
 La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 81/08)**.
-
-Abbiamo due livelli di approfondimento:
-* **Fonte Ufficiale:** Il testo di legge puro (complesso ma autorevole).
-* **Fonte Didattica:** La spiegazione dei concetti chiave (Wikipedia).
-
-<div style="display: flex; gap: 10px; margin-bottom: 20px;">
-  <a href="https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s" style="background-color: #2c3e50; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-    🏛️ Leggi su Gazzetta Ufficiale
-  </a>
-  <a href="https://it.wikipedia.org/wiki/Testo_unico_sulla_sicurezza_sul_lavoro" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-    📖 Leggi su Wikipedia
-  </a>
-</div>
+Tutte le figure aziendali devono rispettare quanto stabilito nella fonte ufficiale:
+🔗 **[Consulta il D.Lgs 81/08 sulla Gazzetta Ufficiale della Repubblica Italiana](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s)**
 
 ---
 
-## 2. I Concetti Chiave: Prevenzione vs Protezione
-Prima di vedere i ruoli, è fondamentale capire la logica della legge.
+## 2. Concetti Chiave: Prevenzione vs Protezione
+Prima di analizzare i ruoli, è fondamentale capire la logica della legge che distingue due tipi di intervento.
 
 | Concetto | Definizione | Esempio |
 | :--- | :--- | :--- |
-| **🛡️ PREVENZIONE** | Tutto ciò che facciamo per **evitare** che accada un incidente. Agisce sulla probabilità. | Formazione, manutenzione macchine, pause, segnaletica. |
-| **⛑️ PROTEZIONE** | Tutto ciò che usiamo per **limitare i danni** se l'incidente accade comunque. | Casco, scarpe antinfortunistiche, imbragature, estintori. |
+| **🛡️ PREVENZIONE** | Tutto ciò che facciamo per **evitare** che accada un incidente. Agisce sulla probabilità (abbassandola). | Formazione, manutenzione macchine, pause, segnaletica. |
+| **⛑️ PROTEZIONE** | Tutto ciò che usiamo per **limitare i danni** se l'incidente accade comunque. Agisce sulla gravità. | Casco, scarpe antinfortunistiche, imbragature, estintori. |
 
 > *"La Prevenzione salva dalla causa, la Protezione salva dall'effetto."*
 
@@ -33,7 +22,7 @@ Prima di vedere i ruoli, è fondamentale capire la logica della legge.
 ## 3. L'Organizzazione (Mappa Interattiva)
 La sicurezza si basa su **Persone** (chi ha le responsabilità) e **Documenti** (cosa bisogna scrivere).
 
-> **Istruzione:** Clicca sulle caselle per aprire le schede interne o i link di approfondimento.
+> **Istruzione:** Clicca sulle caselle per aprire la pagina ufficiale dell'Ente di riferimento (INAIL, Ministero, Gazzetta).
 
 ```mermaid
 graph TD
@@ -43,15 +32,15 @@ graph TD
     subgraph Persone ["👥 L'ORGANIGRAMMA (Chi fa cosa)"]
         direction TB
         %% --- NODI ---
-        DL["DATORE DI LAVORO<br>(Il Decisore)"]:::boss
-        DIR["DIRIGENTE<br>(L'Organizzatore)"]:::man
-        PRE["PREPOSTO<br>(Il Controllore)"]:::man
-        LAV["LAVORATORE<br>(L'Esecutore)"]:::worker
+        DL["DATORE DI LAVORO<br>(Responsabilità Penale)"]:::boss
+        DIR["DIRIGENTE<br>(Organizza)"]:::man
+        PRE["PREPOSTO<br>(Vigila)"]:::man
+        LAV["LAVORATORE<br>(Esegue)"]:::worker
 
         %% --- STAFF ---
         RSPP["RSPP<br>(Tecnico Sicurezza)"]:::staff
-        MC["MEDICO COMP.<br>(Sanitario)"]:::staff
-        RLS["RLS<br>(Sindacale)"]:::rep
+        MC["MEDICO COMP.<br>(Sorveglianza Sanitaria)"]:::staff
+        RLS["RLS<br>(Rappresentante Lavoratori)"]:::rep
 
         %% --- FLUSSI GERARCHICI ---
         DL ==>|Delega| DIR
@@ -83,21 +72,32 @@ graph TD
     end
 
     %% ==========================================
-    %%   INTERAZIONI (CLICK)
+    %%   INTERAZIONI (LINK A ENTI UFFICIALI)
     %% ==========================================
     
-    %% Link Persone (Puntano alle tue schede interne)
-    click DL "#/def_datore" "Scheda interna: Datore di Lavoro"
-    click PRE "#/def_preposto" "Scheda interna: Preposto"
-    click LAV "#/def_lavoratore" "Scheda interna: Lavoratore"
-    click RSPP "[https://it.wikipedia.org/wiki/Responsabile_del_servizio_di_prevenzione_e_protezione](https://it.wikipedia.org/wiki/Responsabile_del_servizio_di_prevenzione_e_protezione)" "Wikipedia: RSPP"
-    click MC "#/def_medico" "Scheda interna: Medico"
-    click RLS "[https://it.wikipedia.org/wiki/Rappresentante_dei_lavoratori_per_la_sicurezza](https://it.wikipedia.org/wiki/Rappresentante_dei_lavoratori_per_la_sicurezza)" "Wikipedia: RLS"
+    %% DATORE DI LAVORO -> Ministero del Lavoro (FAQ Sicurezza)
+    click DL "[https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza)" "Ministero del Lavoro: Salute e Sicurezza"
+    
+    %% PREPOSTO E DIRIGENTE -> Ispettorato Nazionale del Lavoro
+    click DIR "[https://www.ispettorato.gov.it/](https://www.ispettorato.gov.it/)" "Ispettorato Nazionale del Lavoro"
+    click PRE "[https://www.ispettorato.gov.it/](https://www.ispettorato.gov.it/)" "Ispettorato Nazionale del Lavoro"
+    
+    %% LAVORATORE -> INAIL (Opuscolo Lavoratori)
+    click LAV "[https://www.inail.it/cs/internet/attivita/prevenzione.html](https://www.inail.it/cs/internet/attivita/prevenzione.html)" "INAIL: Sezione Prevenzione"
 
-    %% Link Documenti
-    click NORMA "[https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s)" "Fonte Ufficiale: Gazzetta"
-    click DVR "[https://it.wikipedia.org/wiki/Documento_di_valutazione_dei_rischi](https://it.wikipedia.org/wiki/Documento_di_valutazione_dei_rischi)" "Wikipedia: DVR"
-    click POS "#/def_pos" "Scheda interna: POS"
+    %% RSPP -> INAIL (Gestione Sicurezza)
+    click RSPP "[https://www.inail.it/cs/internet/attivita/prevenzione/gestione-salute-sicurezza.html](https://www.inail.it/cs/internet/attivita/prevenzione/gestione-salute-sicurezza.html)" "INAIL: Gestione Salute e Sicurezza"
+    
+    %% MEDICO -> Ministero della Salute
+    click MC "[https://www.salute.gov.it/portale/temi/p2_6.jsp?id=1302&area=sicurezzaLavoro&menu=medico](https://www.salute.gov.it/portale/temi/p2_6.jsp?id=1302&area=sicurezzaLavoro&menu=medico)" "Ministero della Salute: Medico Competente"
+    
+    %% RLS -> INAIL (RLS)
+    click RLS "[https://www.inail.it/cs/internet/attivita/prevenzione/formazione/rls.html](https://www.inail.it/cs/internet/attivita/prevenzione/formazione/rls.html)" "INAIL: Il Rappresentante dei Lavoratori"
+
+    %% DOCUMENTI -> GAZZETTA UFFICIALE / MINISTERO
+    click NORMA "[https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s](https://www.gazzettaufficiale.it/eli/id/2008/04/30/008G0104/s)" "Gazzetta Ufficiale: Testo Unico"
+    click DVR "[https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza/focus-on/valutazione-dei-rischi/Pagine/default.aspx](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza/focus-on/valutazione-dei-rischi/Pagine/default.aspx)" "Ministero del Lavoro: Valutazione Rischi"
+    click POS "[https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza](https://www.lavoro.gov.it/temi-e-priorita/salute-e-sicurezza)" "Ministero del Lavoro: Cantieri"
 
     %% ==========================================
     %%   STILI (CSS)
