@@ -11,37 +11,46 @@ Non è solo un "foglio di calcolo", ma il biglietto da visita dell'azienda verso
 ## 2. L'Analisi SWOT (Strategia)
 Prima di fare i calcoli, l'imprenditore usa la **Matrice SWOT** per incrociare i fattori Interni/Esterni con quelli Positivi/Negativi.
 
-Ecco la matrice grafica della nostra azienda:
+Ecco lo schema concettuale:
 
-```mermaid
-graph TB
-    %% --- DEFINIZIONE DELLA GRIGLIA ---
-    subgraph MATRICE_SWOT ["MATRICE SWOT"]
-        direction TB
-        
-        %% RIGA 1: FATTORI INTERNI (Nota le virgolette aggiunte nel titolo)
-        subgraph INTERNI ["FATTORI INTERNI (Dipendono da noi)"]
-            direction LR
-            S["STRENGTHS<br>(Punti di Forza)<br><br>✅ Personale Qualificato<br>✅ Brevetti<br>✅ Buon Brand"]:::pos
-            W["WEAKNESSES<br>(Debolezze)<br><br>❌ Pochi soldi<br>❌ Macchinari vecchi<br>❌ Marketing assente"]:::neg
-        end
+![Matrice SWOT](swot_analysis.svg)
 
-        %% RIGA 2: FATTORI ESTERNI (Nota le virgolette aggiunte nel titolo)
-        subgraph ESTERNI ["FATTORI ESTERNI (Dipendono dal Mercato)"]
-            direction LR
-            O["OPPORTUNITIES<br>(Opportunità)<br><br>🚀 Incentivi Statali<br>🚀 Nuove Tecnologie<br>🚀 Fallimento concorrente"]:::pos
-            T["THREATS<br>(Minacce)<br><br>⚠️ Tasse in aumento<br>⚠️ Crisi Economica<br>⚠️ Burocrazia lenta"]:::neg
-        end
-    end
+<br>
 
-    %% --- LINK INVISIBILE PER IMPILARE LE RIGHE ---
-    INTERNI ~~~ ESTERNI
-
-    %% --- STILI (Colori Verde/Rosso) ---
-    classDef pos fill:#d4edda,stroke:#28a745,stroke-width:2px,color:#155724;
-    classDef neg fill:#f8d7da,stroke:#dc3545,stroke-width:2px,color:#721c24;
+<details>
+  <summary style="background-color: #007bff; color: white; padding: 15px; border-radius: 5px; cursor: pointer; font-weight: bold; list-style: none;">
+    🔍 CLICCA QUI PER UN ESEMPIO PRATICO (ElectroTech S.p.A.)
+  </summary>
+  
+  <div style="background-color: #f1f1f1; padding: 20px; border-left: 5px solid #007bff; margin-top: 10px;">
+    <h3>Scenario: Nuova Divisione "Fotovoltaico"</h3>
+    <p>La nostra azienda vuole lanciare un servizio di installazione pannelli solari.</p>
     
-    %% Stile per i contenitori
-    style MATRICE_SWOT fill:#fff,stroke:#fff
-    style INTERNI fill:#e2e6ea,stroke:#333,stroke-dasharray: 5 5,color:#333
-    style ESTERNI fill:#e2e6ea,stroke:#333,stroke-dasharray: 5 5,color:#333
+    <ul>
+      <li><strong>Strengths (Forza):</strong> Abbiamo elettricisti già certificati internamente.</li>
+      <li><strong>Weaknesses (Debolezze):</strong> Non abbiamo furgoni attrezzati per i tetti.</li>
+      <li><strong>Opportunities (Opportunità):</strong> Il Governo ha lanciato il "Bonus Green".</li>
+      <li><strong>Threats (Minacce):</strong> Concorrenza aggressiva di aziende cinesi low-cost.</li>
+    </ul>
+
+    <hr>
+    <strong>Strategia Risultante:</strong> Sfruttiamo i tecnici interni (S) per cogliere il Bonus (O), ma dobbiamo investire subito nei furgoni (W) per battere la concorrenza (T).
+  </div>
+</details>
+
+---
+
+## 3. La Struttura del Business Plan
+Il documento completo si divide in due parti:
+
+### A) Parte Descrittiva (Qualitativa)
+1.  **Executive Summary:** Sintesi per gli investitori.
+2.  **L'Impresa:** Chi siamo (Storia, Soci, Organigramma).
+3.  **Mercato:** Analisi dei clienti e concorrenti.
+4.  **Marketing Mix:** Le 4P (Prodotto, Prezzo, Posto, Promozione).
+5.  **Piano Operativo:** Risorse umane e tecnologie necessarie.
+
+### B) Parte Economico-Finanziaria (Quantitativa)
+1.  **Piano degli Investimenti:** Spese di avvio (Start-up).
+2.  **Conto Economico:** Ricavi previsti - Costi previsti = **Utile**.
+3.  **Break Even Point (B.E.P.):** Il punto di pareggio (quando i ricavi iniziano a superare i costi).
