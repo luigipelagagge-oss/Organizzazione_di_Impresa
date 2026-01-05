@@ -1,7 +1,3 @@
----
-layout: default
----
-
 # L'R.S.P.P.
 > **Definizione (Art. 2 D.Lgs 81/08):** Responsabile del Servizio di Prevenzione e Protezione. Persona in possesso delle capacità e dei requisiti professionali designata dal datore di lavoro, a cui risponde, per coordinare il servizio di prevenzione e protezione dai rischi.
 
@@ -23,4 +19,4 @@ L'RSPP non risponde se il Datore non spende i soldi.
 Risponde penalmente (in concorso col Datore) solo per **Colpa Professionale**, ovvero se ha valutato male un rischio o ha dato un suggerimento tecnicamente sbagliato che ha causato un incidente.
 
 ---
-[🔙 Torna all'Organigramma](ud4.html)
+[🔙 Torna all'Organigramma](ud4.md)
