@@ -1,9 +1,40 @@
-* [🏠 Home](README.md)
-* **Modulo 4 - Azienda**
-  * [4.1 L'Azienda](ud1.md)
-  * [📊 Focus: Business Plan](business_plan.md)
-  * [4.2 Qualità (PDCA)](ud2.md)
-  * [4.3 Strumenti Amm.](ud3.md)
-  * [4.4 Sicurezza (D.Lgs 81/08)](ud4.md)
-  * [4.5 Quesiti anni precedenti](ud5.md)
-* [📘 Manuale Sicurezza Completo](manuale_completo.md)
+# 📚 Organizzazione d'Impresa
+
+## Navigazione
+
+[🏠 Home](#/home)
+
+### Unità Didattiche
+1. [Unità 1 - Introduzione](#/ud1)
+2. [Unità 2 - Le Forme Giuridiche](#/ud2)
+3. [Unità 3 - Le Funzioni Aziendali](#/ud3)
+4. [Unità 4 - Sicurezza sul Lavoro](#/ud4)
+5. [Unità 5 - Gestione Ambientale](#/ud5)
+
+### 📋 Documenti
+- [📖 Manuale Completo](#/manuale_completo)
+- [📊 Business Plan](#/business_plan)
+
+### 🏭 Analisi Strategica
+- [📈 SWOT Analysis](swot_analysis.svg)
+
+### 🔍 Glossario (Unità 4)
+- [👔 Datore di Lavoro](#/def_datore)
+- [👨‍💼 Dirigente](#/def_dirigente)
+- [👷 Preposto](#/def_preposto)
+- [👨‍🔧 Lavoratore](#/def_lavoratore)
+- [🛡️ RSPP](#/def_rspp)
+- [👨‍⚕️ Medico Competente](#/def_medico)
+- [🗣️ RLS](#/def_rls)
+- [⚖️ Normativa](#/def_norme)
+- [⚠️ DVR](#/def_dvr)
+- [🏗️ POS](#/def_pos)
+
+### 🌱 Sistemi di Gestione
+- [✅ ISO 9001 - Qualità](#/def_iso_9001)
+- [🛡️ ISO 45001 - Sicurezza](#/def_iso_45001)
+- [🌿 ISO 14001 - Ambiente](#/def_iso_14001)
+
+---
+
+*Progetto didattico - Luigi Pelagagge*
