@@ -1,6 +1,6 @@
-# ⚠️ D.V.R. (Documento Valutazione Rischi)
+# ⚠️ Il Documento di Valutazione dei Rischi (D.V.R.)
 
-Il DVR è il documento **più importante** per la sicurezza. Non è un semplice pezzo di carta, ma la "fotografia dinamica" della sicurezza in azienda.
+Il D.V.R. è il documento **più importante** per la sicurezza. Non è un semplice pezzo di carta, ma la "fotografia dinamica" della sicurezza in azienda.
 
 ---
 
@@ -15,8 +15,13 @@ Dove:
 * **D = Danno:** Se l'evento accade, quanto male ci si fa? (Scala 1-4).
 * **R = Rischio:** Il numero finale che indica l'urgenza dell'intervento.
 
-### 🔢 La Matrice del Rischio
-Ecco la visualizzazione grafica che incrocia Probabilità e Danno:
+### 🖼️ Visualizzazione Grafica
+Ecco la matrice a colori (Utile per capire al volo le zone di pericolo):
+
+![Matrice del Rischio](ValutazioneRischi.jpg)
+
+### 🔢 Tabella di Calcolo
+Lo schema logico per calcolare il punteggio esatto:
 
 | P \ D | 1. Lievissimo | 2. Modesto | 3. Grave | 4. Gravissimo |
 | :---: | :---: | :---: | :---: | :---: |
@@ -40,7 +45,7 @@ Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per
 | Tipo | Obiettivo | Esempio |
 | :--- | :--- | :--- |
 | **🛡️ PREVENZIONE** | Abbassare la **Probabilità** | Formazione, manutenzione macchine, procedure. |
-| **⛑️ PROTEZIONE** | Abbassare il **Danno** | Uso dei DPI (caschi, scarpe), barriere fisiche, estintori. |
+| **⛑️ PROTEZIONE** | Abbassare il **Danno** | Uso dei DPI (caschi, scarpe), barriere fisiche. |
 
 ---
 
@@ -58,11 +63,4 @@ Deve però avvalersi della collaborazione di:
 * Va aggiornato **immediatamente** se:
     1. Cambia il processo produttivo.
     2. Cambia l'organizzazione del lavoro.
-    3. Avvengono infortuni significativi.
-    4. La sorveglianza sanitaria ne evidenzia la necessità.
-
-!> **ATTENZIONE: DATA CERTA**
-Il documento deve avere **"Data Certa"** (es. PEC, firma digitale, timbro postale) per dimostrare legalmente che è stato fatto **prima** di un eventuale infortunio. Senza data certa, in tribunale non vale nulla.
-
----
-[🔙 Torna all'Organigramma](ud4.md)
+    3. Avvengono in
