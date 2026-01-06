@@ -80,21 +80,25 @@ graph TD
     end
 
     %% ==========================================
-    %%    LINK (INTERAZIONI)
+    %%    LINK FUNZIONANTI (SINTASSI #/FILE)
     %% ==========================================
     
-    click NORMA "def_norme.md" "Vai a Normativa"
-    click DVR "def_dvr.md" "Vai a DVR"
-    click POS "def_pos.md" "Vai a POS"
+    %% Documenti (ipotesi nomi file standard)
+    click NORMA "#/def_norme" "Apri scheda: Normativa"
+    click DVR "#/def_dvr" "Apri scheda: DVR"
+    click POS "#/def_pos" "Apri scheda: POS"
 
-    click DL "def_datore.md" "Vai a Datore"
-    click RLS "def_rls.md" "Vai a RLS"
-    click RSPP "def_rspp.md" "Vai a RSPP"
-    click MC "def_medico.md" "Vai a Medico"
-    click DIR "def_dirigente.md" "Vai a Dirigente"
-    click PRE "def_preposto.md" "Vai a Preposto"
-    click LAV "def_lavoratore.md" "Vai a Lavoratore"
-    click MEETING "#riunione-periodica-art-35" "Vai a Riunione Periodica"
+    %% Persone
+    click DL "#/def_datore" "Apri scheda: Datore"
+    click RLS "#/def_rls" "Apri scheda: RLS"
+    click RSPP "#/def_rspp" "Apri scheda: RSPP"
+    click MC "#/def_medico" "Apri scheda: Medico"
+    click DIR "#/def_dirigente" "Apri scheda: Dirigente"
+    click PRE "#/def_preposto" "Apri scheda: Preposto"
+    click LAV "#/def_lavoratore" "Apri scheda: Lavoratore"
+    
+    %% Link Interno per la Riunione
+    click MEETING "#riunione-periodica-art-35" "Scorri a Riunione Periodica"
 
     %% ==========================================
     %%    STILI GRAFICI
