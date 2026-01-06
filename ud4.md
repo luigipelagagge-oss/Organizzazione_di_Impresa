@@ -80,10 +80,10 @@ graph TD
     end
 
     %% ==========================================
-    %%    LINK FUNZIONANTI (SINTASSI #/FILE)
+    %%    LINK FUNZIONANTI (SINTASSI CORRETTA DOCSIFY)
     %% ==========================================
     
-    %% Documenti (ipotesi nomi file standard)
+    %% Documenti
     click NORMA "#/def_norme" "Apri scheda: Normativa"
     click DVR "#/def_dvr" "Apri scheda: DVR"
     click POS "#/def_pos" "Apri scheda: POS"
@@ -97,8 +97,9 @@ graph TD
     click PRE "#/def_preposto" "Apri scheda: Preposto"
     click LAV "#/def_lavoratore" "Apri scheda: Lavoratore"
     
-    %% Link Interno per la Riunione
-    click MEETING "#riunione-periodica-art-35" "Scorri a Riunione Periodica"
+    %% Link Interno per la Riunione (CORRETTO PER DOCSIFY)
+    %% Usa il percorso completo con query ID per evitare il 404
+    click MEETING "#/ud4?id=riunione-periodica-art-35" "Scorri a Riunione Periodica"
 
     %% ==========================================
     %%    STILI GRAFICI
