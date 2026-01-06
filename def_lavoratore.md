@@ -33,6 +33,15 @@ Perché è vietato rimuovere i carter? Perché gli ingranaggi in movimento crean
 
 ---
 
+### 🎥 Video Didattico: Caccia ai Rischi (Napo)
+
+Napo è il personaggio simbolo della sicurezza in Europa. In questo episodio ci insegna a **identificare i pericoli** prima che sia troppo tardi.
+
+[![Napo Hazard Hunter](https://img.youtube.com/vi/Uj2W1xPAnlM/hqdefault.jpg)](https://www.napofilm.net/en/learning-with-napo/napo-for-teachers/napos-hazard-hunter-identification-risks-and-hazards)
+*(Clicca sull'immagine per aprire la risorsa interattiva INAIL/EU-OSHA)*
+
+---
+
 ## 🚫 Sanzioni
 
 !> **ATTENZIONE (Art. 59)**
