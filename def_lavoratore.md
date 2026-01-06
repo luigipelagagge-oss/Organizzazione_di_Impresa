@@ -24,12 +24,11 @@ Persona che svolge un'attività lavorativa nell'ambito dell'organizzazione di un
 
 ---
 
-### 🎬 Animazione: Il Pericolo degli Organi in Movimento
+### ⚙️ Il Pericolo degli Organi in Movimento
 
 Perché è vietato rimuovere i carter? Perché gli ingranaggi in movimento creano un rischio gravissimo di **impigliamento e schiacciamento**.
 
-![Pericolo Ingranaggi](https://upload.wikimedia.org/wikipedia/commons/c/c2/Gears_animation.gif)
-*(Animazione che mostra il movimento continuo e pericoloso degli organi meccanici)*
+👉 [Clicca qui per vedere l'animazione del rischio ingranaggi (Fonte: Wikimedia)](https://commons.wikimedia.org/wiki/File:Gears_animation.gif)
 
 ---
 
