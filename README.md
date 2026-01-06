@@ -1,77 +1,40 @@
-# 📘 Manuale di Progetto: Organizzazione di Impresa
+# 📘 Manuale e Mappa del Sito: Organizzazione di Impresa
 
-Benvenuto nella documentazione tecnica del sito.
-Questo progetto è un portale educativo basato su **Docsify** e **GitHub Pages** per l'insegnamento dell'Organizzazione Aziendale e della Sicurezza sul Lavoro.
+Benvenuto. Questo è il portale educativo per l'Organizzazione Aziendale e la Sicurezza sul Lavoro (D.Lgs 81/08).
 
-> **Stato del Progetto:** 🟢 FUNZIONANTE
-> **Ultima Verifica:** Gennaio 2026
-
----
-
-## 🗺️ Mappa del Sito e Relazioni
-
-Il sito è strutturato con una logica **"Hub & Spoke"** (Mozzo e Raggi): ci sono pagine principali (Diagrammi) che portano a pagine di dettaglio.
-
-### 1. Le Pagine "Madre" (Diagrammi)
-Queste pagine contengono i grafici interattivi realizzati con **Mermaid.js**.
-* **`ud1.md`** (L'Azienda e Sistema Integrato): Contiene l'organigramma generale e i link ISO.
-* **`ud4.md`** (Sicurezza D.Lgs 81/08): Contiene l'organigramma della sicurezza.
-
-### 2. Le Pagine "Figlio" (Dettagli)
-Queste sono pagine di testo semplice che approfondiscono i concetti.
-* *Sicurezza:* `def_datore.md`, `def_rspp.md`, `def_dvr.md`, `def_norme.md`, `def_pos.md`, ecc.
-* *ISO/Ambiente:* `def_iso_9001.md`, `def_iso_14001.md`, ecc.
-
-### 3. I File di Sistema
-* `index.html`: Il motore del sito (contiene la configurazione di Docsify).
-* `_sidebar.md`: Il menu laterale di navigazione.
-* `README.md`: Questo file (Home Page / Manuale).
+> **Stato:** 🟢 ONLINE
+> **Data:** Gennaio 2026
 
 ---
 
-## ⚙️ Regole di Manutenzione (IMPORTANTE)
+## 🗺️ NAVIGAZIONE RAPIDA (Mappa del Sito)
 
-Per evitare che il sito si "rompa" (grafici che spariscono, errori 404), segui rigorosamente queste regole di sintassi.
+Usa questi link se il menu laterale non è disponibile.
 
-### 1. La Regola d'Oro dei Link (Mermaid vs Markdown)
-C'è una differenza fondamentale nel modo di scrivere i link a seconda di dove ti trovi:
+### 1. I Diagrammi Principali (Punti di Partenza)
+* [**📊 MODULO 1: Organigramma Aziendale**](ud1.md)
+    * *Struttura gerarchica, ISO 9001/14001/45001.*
+* [**⚠️ MODULO 4: Sicurezza (D.Lgs 81/08)**](ud4.md)
+    * *Organigramma della sicurezza, Prevenzione e Protezione.*
 
-| Dove stai scrivendo? | Sintassi Corretta | Esempio |
-| :--- | :--- | :--- |
-| **Dentro un grafico MERMAID** | `#/nomefile` | `click A "#/def_dvr" "Apri"` |
-| **Testo normale (Markdown)** | `nomefile.md` | `[Torna indietro](ud4.md)` |
-
-> ⚠️ **ATTENZIONE:** Se dentro Mermaid dimentichi il `#/` (hash + slash), il grafico sparirà quando l'utente prova a tornare indietro col browser.
-
-### 2. Come creare una nuova pagina
-1.  Crea un nuovo file (es. `nuova_lezione.md`).
-2.  Scrivi il contenuto iniziando con un titolo `# Titolo`.
-3.  Aggiungi il link al menu laterale in `_sidebar.md`:
-    `* [Titolo nel Menu](nuova_lezione.md)`
-
-### 3. Come aggiungere un nodo al grafico
-1.  Apri il file "Madre" (es. `ud4.md`).
-2.  Nel blocco `graph TD`, definisci il nodo: `NODO("Testo")`.
-3.  Collega il nodo: `ALTRONODO --> NODO`.
-4.  Attiva il click (Ricorda la regola #1!):
-    `click NODO "#/nuova_lezione" "Tooltip"`
+### 2. Documenti di Dettaglio (Schede)
+* **Sicurezza:** [Il DVR](def_dvr.md) | [Il Lavoratore](def_lavoratore.md) | [Il Preposto](def_preposto.md) | [Il Dirigente](def_dirigente.md)
+* **Normative:** [ISO 9001](def_iso_9001.md) | [ISO 14001](def_iso_14001.md) | [ISO 45001](def_iso_45001.md)
 
 ---
 
-## 🛠️ Risoluzione Problemi Comuni
+## ⚙️ ISTRUZIONI PER LA MANUTENZIONE
 
-**PROBLEMA: Vedo il codice scritto invece del grafico.**
-* *Causa:* Hai cancellato per sbaglio i marcatori di codice ` ```mermaid ` oppure hai incollato caratteri strani prima dell'intestazione.
-* *Soluzione:* Pulisci il file. Assicurati che inizi col titolo `#` e che il blocco mermaid sia racchiuso correttamente.
+Per chi modifica il codice del sito:
 
-**PROBLEMA: Clicco e vedo "404 Not Found".**
-* *Causa:* Il nome del file nel link è sbagliato o il file non esiste.
-* *Soluzione:* Controlla maiuscole/minuscole. `Def_Dvr.md` è diverso da `def_dvr.md`. Usa sempre minuscolo per sicurezza.
+1.  **Regola dei Link:**
+    * Nei file `.md` normali: usare `[Testo](pagina.md)`
+    * Dentro i grafici MERMAID: usare `click NODO "#/pagina"` (Obbligatorio `#/`)
 
-**PROBLEMA: Torno indietro e il grafico non c'è più.**
-* *Causa:* Nel grafico Mermaid manca il `#/` davanti al link.
-* *Soluzione:* Correggi il link nel file `ud4.md` o `ud1.md`.
+2.  **File di Sistema:**
+    * `ud1.md` e `ud4.md` sono i file "Madre". Non cancellare.
+    * `_sidebar.md` gestisce il menu (se attivo).
+    * `index.html` è il motore.
 
 ---
-
-[📂 Vai al Repository GitHub](https://github.com/tuo-utente/tuo-repo)
+[📂 Vai al Repository GitHub](https://github.com/luigipelagagge-oss/Organizzazione_di_Impresa)
