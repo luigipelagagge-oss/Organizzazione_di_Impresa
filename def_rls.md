@@ -8,7 +8,7 @@ Persona eletta o designata per rappresentare i lavoratori per quanto concerne gl
 
 ### 📸 Il Ruolo in Sintesi
 
-![Il Ruolo dell'RLS](RLS.jpg)
+![Il Ruolo dell'RLS](RLS.png)
 
 ---
 
