@@ -1,5 +1,7 @@
-// Mappa delle pagine disponibili
-const pages = {
+// ROUTER.JS - Gestione della navigazione SPA
+
+// Configurazione delle pagine disponibili
+const PAGES = {
     'home': 'README.md',
     'ud1': 'ud1.md',
     'ud2': 'ud2.md',
@@ -24,25 +26,43 @@ const pages = {
     'business_plan': 'business_plan.md'
 };
 
-// Configurazione di marked per renderizzare correttamente il markdown
+// Configurazione di marked per renderizzare Markdown
 marked.setOptions({
     breaks: true,
     gfm: true,
-    headerIds: true
+    headerIds: true,
+    sanitize: false
 });
 
-// Funzione per caricare e renderizzare markdown
+// Inizializzazione di Mermaid
+mermaid.initialize({
+    startOnLoad: false,
+    theme: 'default',
+    flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true,
+        curve: 'basis'
+    }
+});
+
+// Funzione per caricare una pagina
 async function loadPage(pageId) {
     const contentDiv = document.getElementById('content');
     
-    // Mostra un caricamento temporaneo
-    contentDiv.innerHTML = '<div style="text-align: center; padding: 50px;"><p>Caricamento...</p></div>';
+    // Mostra stato di caricamento
+    contentDiv.innerHTML = `
+        <div style="text-align: center; padding: 50px;">
+            <h2>Caricamento...</h2>
+            <p>${pageId}</p>
+        </div>
+    `;
     
-    if (!pages[pageId]) {
+    // Verifica se la pagina esiste
+    if (!PAGES[pageId]) {
         contentDiv.innerHTML = `
             <div class="card">
                 <h1>Pagina non trovata</h1>
-                <p>La pagina richiesta non esiste.</p>
+                <p>La pagina "${pageId}" non esiste.</p>
                 <a href="#/home" class="nav-button">Torna alla Home</a>
             </div>
         `;
@@ -50,44 +70,43 @@ async function loadPage(pageId) {
     }
     
     try {
-        const response = await fetch(pages[pageId]);
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const markdown = await response.text();
+        // Carica il file markdown
+        const response = await fetch(PAGES[pageId]);
+        if (!response.ok) throw new Error(`Errore HTTP ${response.status}`);
+        
+        const markdownText = await response.text();
         
         // Converti markdown in HTML
-        const html = marked.parse(markdown);
-        contentDiv.innerHTML = html;
+        const htmlContent = marked.parse(markdownText);
         
-        // Inizializza Mermaid per i diagrammi
-        if (typeof mermaid !== 'undefined') {
-            mermaid.initialize({ 
-                startOnLoad: true,
-                theme: 'default',
-                flowchart: { 
-                    useMaxWidth: true,
-                    htmlLabels: true
-                }
-            });
-            mermaid.init(undefined, '.mermaid');
-        }
+        // Inserisci nel contenitore
+        contentDiv.innerHTML = `
+            <div class="markdown-content">
+                ${htmlContent}
+            </div>
+        `;
         
-        // Processa i link interni per utilizzare il routing
+        // Processa i diagrammi Mermaid
+        processMermaidDiagrams();
+        
+        // Processa i link interni
         processInternalLinks();
         
-        // Aggiorna l'URL nella barra degli indirizzi
-        window.history.replaceState(null, '', `#/${pageId}`);
+        // Processa le immagini
+        processImages();
         
         // Aggiorna la sidebar
         updateSidebar(pageId);
+        
+        // Scrolla in alto
+        window.scrollTo(0, 0);
         
     } catch (error) {
         console.error('Errore nel caricamento:', error);
         contentDiv.innerHTML = `
             <div class="card">
-                <h1>Errore nel caricamento</h1>
-                <p>Impossibile caricare la pagina: ${pages[pageId]}</p>
+                <h1>Errore di caricamento</h1>
+                <p>Impossibile caricare la pagina: ${PAGES[pageId]}</p>
                 <p>${error.message}</p>
                 <a href="#/home" class="nav-button">Torna alla Home</a>
             </div>
@@ -95,34 +114,82 @@ async function loadPage(pageId) {
     }
 }
 
+// Funzione per processare i diagrammi Mermaid
+function processMermaidDiagrams() {
+    const mermaidElements = document.querySelectorAll('.mermaid');
+    if (mermaidElements.length > 0) {
+        mermaidElements.forEach(element => {
+            // Pulisci e re-inizializza
+            const originalCode = element.textContent;
+            element.innerHTML = '';
+            element.textContent = originalCode;
+        });
+        
+        try {
+            mermaid.init(undefined, mermaidElements);
+            
+            // Aggiungi gestori di click per i diagrammi Mermaid con link
+            mermaidElements.forEach(element => {
+                const links = element.querySelectorAll('a');
+                links.forEach(link => {
+                    const href = link.getAttribute('href');
+                    if (href && href.startsWith('#/')) {
+                        link.style.cursor = 'pointer';
+                        link.addEventListener('click', function(e) {
+                            e.preventDefault();
+                            const targetPage = href.substring(2);
+                            window.location.hash = '#/' + targetPage;
+                        });
+                    }
+                });
+            });
+        } catch (error) {
+            console.error('Errore nel renderizzare Mermaid:', error);
+        }
+    }
+}
+
 // Funzione per processare i link interni
 function processInternalLinks() {
-    const links = document.querySelectorAll('a');
+    const links = document.querySelectorAll('#content a');
+    
     links.forEach(link => {
         const href = link.getAttribute('href');
         
-        // Se è un link a un file .md locale
+        // Se è un link a un file .md
         if (href && href.endsWith('.md') && !href.startsWith('http')) {
-            // Converti il percorso in ID pagina
             const pageName = href.replace('.md', '').replace('./', '');
-            
-            if (pages[pageName]) {
+            if (PAGES[pageName]) {
                 link.setAttribute('href', `#/${pageName}`);
                 link.addEventListener('click', function(e) {
                     e.preventDefault();
-                    loadPage(pageName);
+                    window.location.hash = '#/' + pageName;
                 });
             }
         }
         
-        // Se è già un link hash (#/)
+        // Se è un link hash (#/)
         else if (href && href.startsWith('#/')) {
             link.addEventListener('click', function(e) {
                 e.preventDefault();
-                const pageId = href.substring(2); // Rimuove '#/'
-                loadPage(pageId);
+                const targetPage = href.substring(2);
+                window.location.hash = '#/' + targetPage;
             });
         }
+        
+        // Aggiungi classe per stili
+        link.classList.add('content-link');
+    });
+}
+
+// Funzione per processare le immagini
+function processImages() {
+    const images = document.querySelectorAll('#content img');
+    images.forEach(img => {
+        img.style.maxWidth = '100%';
+        img.style.height = 'auto';
+        img.style.borderRadius = '5px';
+        img.style.boxShadow = '0 2px 5px rgba(0,0,0,0.1)';
     });
 }
 
@@ -133,25 +200,32 @@ async function loadSidebar() {
         if (!response.ok) return;
         
         const markdown = await response.text();
-        const sidebarDiv = document.getElementById('sidebar');
-        sidebarDiv.innerHTML = marked.parse(markdown);
+        const sidebarDiv = document.getElementById('sidebar-container');
+        const html = marked.parse(markdown);
         
-        // Aggiungi stili ai link della sidebar
+        sidebarDiv.innerHTML = `
+            <div class="logo">Organizzazione d'Impresa</div>
+            <div class="sidebar-content">
+                ${html}
+            </div>
+        `;
+        
+        // Processa i link della sidebar
         const sidebarLinks = sidebarDiv.querySelectorAll('a');
         sidebarLinks.forEach(link => {
             link.classList.add('nav-link');
             
-            link.addEventListener('click', function(e) {
-                e.preventDefault();
-                const href = this.getAttribute('href');
-                if (href && href.startsWith('#/')) {
-                    const pageId = href.substring(2);
-                    loadPage(pageId);
-                }
-            });
+            const href = link.getAttribute('href');
+            if (href && href.startsWith('#/')) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    window.location.hash = href;
+                });
+            }
         });
+        
     } catch (error) {
-        console.error('Errore nel caricamento della sidebar:', error);
+        console.error('Errore nel caricamento sidebar:', error);
     }
 }
 
@@ -167,21 +241,28 @@ function updateSidebar(activePage) {
     });
 }
 
-// Gestione del routing iniziale
-function initRouter() {
+// Gestione del routing
+function handleRouting() {
+    // Estrai la pagina dall'hash
+    const hash = window.location.hash;
+    let pageId = 'home';
+    
+    if (hash && hash.startsWith('#/')) {
+        pageId = hash.substring(2);
+    }
+    
+    // Carica la pagina
+    loadPage(pageId);
+}
+
+// Inizializzazione
+document.addEventListener('DOMContentLoaded', function() {
     // Carica la sidebar
     loadSidebar();
     
-    // Gestisci il cambio dell'hash
-    window.addEventListener('hashchange', function() {
-        const hash = window.location.hash.substring(2) || 'home';
-        loadPage(hash);
-    });
+    // Gestisci il routing iniziale
+    handleRouting();
     
-    // Carica la pagina iniziale
-    const initialPage = window.location.hash.substring(2) || 'home';
-    loadPage(initialPage);
-}
-
-// Inizializza il router quando la pagina è caricata
-document.addEventListener('DOMContentLoaded', initRouter);
+    // Ascolta i cambiamenti dell'hash
+    window.addEventListener('hashchange', handleRouting);
+});
