@@ -1,34 +1,70 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organizzazione d'Impresa</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Librerie necessarie -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
     <style>
-        .mermaid { 
-            background: white; 
-            padding: 20px; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        /* Stili per Mermaid */
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             margin: 20px 0;
             overflow: auto;
+        }
+        
+        /* Stili per i link nel contenuto */
+        .content-link {
+            color: #007bff;
+            text-decoration: none;
+            border-bottom: 1px dotted #007bff;
+        }
+        
+        .content-link:hover {
+            color: #0056b3;
+            border-bottom: 1px solid #0056b3;
+        }
+        
+        /* Bottone di navigazione */
+        .nav-button {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        
+        .nav-button:hover {
+            background: #0056b3;
         }
     </style>
 </head>
 <body>
-    <div class="sidebar" id="sidebar">
-        <!-- La sidebar verrà caricata dinamicamente -->
+    <!-- Contenitore principale -->
+    <div class="sidebar" id="sidebar-container">
+        <!-- Sidebar verrà caricata qui -->
     </div>
     
     <div class="main-content">
         <div id="content">
-            <!-- Il contenuto principale verrà caricato qui -->
+            <!-- Contenuto principale verrà caricato qui dinamicamente -->
+            <div style="text-align: center; padding: 100px 20px;">
+                <h1>Organizzazione d'Impresa</h1>
+                <p>Caricamento in corso...</p>
+            </div>
         </div>
     </div>
 
+    <!-- Script principale -->
     <script src="router.js"></script>
 </body>
 </html>
