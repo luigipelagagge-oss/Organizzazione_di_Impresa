@@ -63,4 +63,11 @@ Deve però avvalersi della collaborazione di:
 * Va aggiornato **immediatamente** se:
     1. Cambia il processo produttivo.
     2. Cambia l'organizzazione del lavoro.
-    3. Avvengono in
+    3. Avvengono infortuni significativi.
+    4. La sorveglianza sanitaria ne evidenzia la necessità.
+
+!> **ATTENZIONE: DATA CERTA**
+Il documento deve avere **"Data Certa"** (es. PEC, firma digitale, timbro postale) per dimostrare legalmente che è stato fatto **prima** di un eventuale infortunio. Senza data certa, in tribunale non vale nulla.
+
+---
+[🔙 Torna alla Mappa Sicurezza](ud4.md)
