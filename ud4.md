@@ -21,7 +21,7 @@ La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 
 
 ## 3. 🗺️ Mappa Interattiva: Ruoli e Relazioni
 
-Clicca sulle caselle per aprire le schede di dettaglio.
+Clicca sulle caselle per aprire le schede. **Clicca sul bottone giallo per vedere la foto del team.**
 
 ```mermaid
 graph TD
@@ -49,8 +49,12 @@ graph TD
         MC[🩺 Medico Comp.]:::staff
         RLS[🗣️ R.L.S.]:::rep
 
-        %% --- NODO RIUNIONE ---
+        %% --- NODO RIUNIONE E FOTO ---
         MEETING((🤝 Riunione<br>Art. 35)):::meeting
+        FOTO[📸 FOTO DI<br>GRUPPO]:::photo
+
+        %% Li collego con linea invisibile per affiancarli
+        MEETING -.- FOTO
 
         %% --- RELAZIONI STAFF (I VERBI) ---
         DL -- Nomina --> RSPP
@@ -80,7 +84,7 @@ graph TD
     end
 
     %% ==========================================
-    %%    LINK FUNZIONANTI (TUTTI A FILE ESTERNI)
+    %%    LINK FUNZIONANTI
     %% ==========================================
     
     %% Documenti
@@ -97,8 +101,9 @@ graph TD
     click PRE "#/def_preposto" "Apri scheda: Preposto"
     click LAV "#/def_lavoratore" "Apri scheda: Lavoratore"
     
-    %% Link Riunione (ORA PUNTA AL NUOVO FILE)
+    %% Link Speciali
     click MEETING "#/def_riunione" "Apri scheda: Riunione Art. 35"
+    click FOTO "Foto_di_Gruppo.png" "Ingrandisci la Foto di Gruppo"
 
     %% ==========================================
     %%    STILI GRAFICI
@@ -110,6 +115,9 @@ graph TD
     classDef rep fill:#f57f17,color:#fff,stroke:#333
     
     classDef meeting fill:#e1bee7,stroke:#8e24aa,stroke-width:2px,color:#000
+    
+    %% STILE GIALLO PER LA FOTO
+    classDef photo fill:#ffeb3b,stroke:#fbc02d,stroke-width:4px,color:#000,stroke-dasharray: 0
     
     classDef doc_law fill:#2c3e50,color:#fff,stroke:#f1c40f,stroke-width:2px
     classDef doc_dvr fill:#e67e22,color:#fff,stroke:#333,stroke-width:2px
