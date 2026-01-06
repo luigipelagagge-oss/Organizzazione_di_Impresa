@@ -1,4 +1,4 @@
-# 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
+ # 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
 
 ## 1. ⚖️ Il Riferimento Legislativo
 La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 81/08)**.
@@ -80,7 +80,7 @@ graph TD
     end
 
     %% ==========================================
-    %%    LINK FUNZIONANTI (SINTASSI CORRETTA DOCSIFY)
+    %%    LINK FUNZIONANTI
     %% ==========================================
     
     %% Documenti
@@ -97,9 +97,9 @@ graph TD
     click PRE "#/def_preposto" "Apri scheda: Preposto"
     click LAV "#/def_lavoratore" "Apri scheda: Lavoratore"
     
-    %% Link Interno per la Riunione (CORRETTO PER DOCSIFY)
-    %% Usa il percorso completo con query ID per evitare il 404
-    click MEETING "#/ud4?id=riunione-periodica-art-35" "Scorri a Riunione Periodica"
+    %% Link Interno per la Riunione (CORRETTO)
+    %% Usa solo ?id= per scorrere nella pagina corrente senza ricaricare
+    click MEETING "?id=riunione-periodica-art-35" "Scorri a Riunione Periodica"
 
     %% ==========================================
     %%    STILI GRAFICI
