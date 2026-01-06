@@ -21,7 +21,7 @@ La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 
 
 ## 3. 🗺️ Mappa Interattiva: Ruoli e Relazioni
 
-Clicca sulle caselle per approfondire. Le frecce indicano **chi nomina**, **chi elegge** e **chi controlla**.
+Clicca sulle caselle per aprire le schede di dettaglio.
 
 ```mermaid
 graph TD
@@ -80,7 +80,7 @@ graph TD
     end
 
     %% ==========================================
-    %%    LINK FUNZIONANTI (SOLUZIONE ASSOLUTA)
+    %%    LINK FUNZIONANTI (TUTTI A FILE ESTERNI)
     %% ==========================================
     
     %% Documenti
@@ -97,9 +97,8 @@ graph TD
     click PRE "#/def_preposto" "Apri scheda: Preposto"
     click LAV "#/def_lavoratore" "Apri scheda: Lavoratore"
     
-    %% Link Interno per la Riunione
-    %% Usiamo il percorso completo del tuo repository per forzare il router
-    click MEETING "/Organizzazione_di_Impresa/#/ud4?id=riunione-periodica-art-35" "Scorri a Riunione Periodica"
+    %% Link Riunione (ORA PUNTA AL NUOVO FILE)
+    click MEETING "#/def_riunione" "Apri scheda: Riunione Art. 35"
 
     %% ==========================================
     %%    STILI GRAFICI
