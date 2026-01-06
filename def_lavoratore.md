@@ -14,17 +14,19 @@ Persona che svolge un'attività lavorativa nell'ambito dell'organizzazione di un
 
 ---
 
-### 🖼️ Esempi Visivi
+### 🖼️ Esempi Visivi: Riconoscere i Doveri
 
-| DPI Obbligatori (Esempi) | Protezione Macchine (Prima e Dopo la Valutazione) |
+È fondamentale saper leggere la segnaletica e capire la differenza tra una macchina sicura e una pericolosa.
+
+| DPI Obbligatori (Cartellonistica) | Protezione Macchine (Prima e Dopo) |
 | :---: | :---: |
-| # ⛑️ 🥽 <br> **Casco e Occhiali**<br>*(Vanno sempre indossati)* | ![Macchina senza carter](Carter.png)<br>**PRIMA della Valutazione**<br>*(Macchina senza Carter)*<br><br>![Macchina con carter](Carter_Valutaz.jpg)<br>**DOPO la Valutazione**<br>*(Macchina con Carter)* |
+| ![Cartello DPI Obbligatori](CartelloDPI.png)<br>**Segnaletica di Sicurezza**<br>*(I cartelli blu rotondi indicano un OBBLIGO: vanno rispettati tassativamente!)* | ![Macchina non protetta](Macchina_NonProtetta.png)<br>**PRIMA: Situazione PERICOLOSA**<br>*(Ingranaggi/Organi in movimento esposti)*<br><br>⬇️ *Dopo la Valutazione dei Rischi* ⬇️<br><br>![Macchina protetta con carter](Carter_Valutaz.jpg)<br>**DOPO: Situazione SICURA**<br>*(Carter di protezione installato)* |
 
 ---
 
 ### 🎬 Animazione: L'Intervento di Protezione
 
-Questa animazione mostra come l'installazione del carter, a seguito della valutazione dei rischi, protegge il lavoratore.
+Questa animazione (in arrivo) mostrerà come l'installazione del carter isola il pericolo e protegge l'operatore.
 
 ![Animazione Carter](animation_placeholder.gif)
 
@@ -33,7 +35,7 @@ Questa animazione mostra come l'installazione del carter, a seguito della valuta
 ## 🚫 Sanzioni
 
 !> **ATTENZIONE (Art. 59)**
-Il lavoratore è punibile penalmente (Arresto o Ammenda) se non rispetta gli obblighi o manomette la sicurezza (es. togliere il carter mostrato sopra).
+Il lavoratore è punibile penalmente (Arresto o Ammenda) se non rispetta gli obblighi (es. non usa i DPI) o manomette la sicurezza (es. rimuove il carter mostrato sopra).
 
 ---
 [🔙 Torna all'Organigramma](ud4.md)
