@@ -3,22 +3,28 @@
 Il D.V.R. è la "mappa" di tutti i rischi presenti in azienda e delle misure prese per eliminarli o ridurli.
 È il documento cardine della sicurezza (Art. 17 e 28 D.Lgs 81/08).
 
-## Caratteristiche Fondamentali
+## 1. La Formula del Rischio
+La valutazione si basa su una formula matematica precisa per dare un "peso" a ogni pericolo:
+
+> **R (Rischio) = P (Probabilità) x D (Danno)**
+
+| Fattore | Descrizione | Esempio |
+| :---: | :--- | :--- |
+| **P** | **PROBABILITÀ** | Quanto è probabile che l'evento accada? (Scala 1-4) |
+| **D** | **DANNO** | Quanto grave sarebbe l'infortunio? (Scala 1-4) |
+| **R** | **RISCHIO** | Il risultato. Se è alto, servono misure urgenti. |
+
+---
+
+## 2. Requisiti e Aggiornamento
 
 ?> **REQUISITO ESSENZIALE:**
 Il documento deve avere **DATA CERTA** (PEC, firma digitale o timbro postale) per dimostrare che è stato fatto *prima* di un eventuale infortunio.
 
-Il D.V.R. deve essere redatto dal **Datore di Lavoro** in collaborazione con:
-* Il Responsabile del Servizio di Prevenzione e Protezione (RSPP).
-* Il Medico Competente (MC).
-* Il Rappresentante dei Lavoratori per la Sicurezza (RLS) (che deve essere consultato).
+Il D.V.R. deve essere redatto dal **Datore di Lavoro** in collaborazione con RSPP, Medico Competente e consultando l'RLS.
 
----
-
-## Quando va aggiornato?
-
-Il D.V.R. non è statico. Va rifatto immediatamente se:
-1.  Cambia il processo produttivo o l'organizzazione.
+### Quando va aggiornato?
+1.  Cambia il processo produttivo.
 2.  Avvengono infortuni significativi.
 3.  La sorveglianza sanitaria ne evidenzia la necessità.
 
