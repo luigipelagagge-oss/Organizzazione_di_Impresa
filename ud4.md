@@ -1,6 +1,6 @@
 # 4.4 Sicurezza sul Lavoro (D.Lgs 81/08)
 
-## 1. Il Riferimento Legislativo
+## 1. ⚖️ Il Riferimento Legislativo
 La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 81/08)**.
 
 > **FONTE UFFICIALE:**
@@ -8,7 +8,9 @@ La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 
 
 ---
 
-## 2. Concetti Chiave: Prevenzione vs Protezione
+## 2. 🛡️ Concetti Chiave: Prevenzione vs Protezione
+
+È fondamentale distinguere questi due termini:
 
 | Concetto | Definizione | Esempio |
 | :--- | :--- | :--- |
@@ -17,74 +19,50 @@ La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 
 
 ---
 
-## 3. L'Organizzazione (Mappa Interattiva)
+## 3. 👥 L'Organizzazione (Mappa Interattiva)
 
-> **Istruzione:** Clicca sulle caselle per aprire le schede di dettaglio.
-
-<br>
+La sicurezza è un lavoro di squadra. Clicca sulle caselle per conoscere i dettagli di ogni ruolo, oppure sull'ovale centrale per la Riunione Periodica.
 
 ```mermaid
 graph TD
-    %% ==========================================
-    %%   SUBGRAPH 1: LE PERSONE
-    %% ==========================================
-    subgraph Persone ["👥 L'ORGANIGRAMMA"]
-        direction TB
-        DL["DATORE DI LAVORO"]:::boss
-        DIR["DIRIGENTE"]:::man
-        PRE["PREPOSTO"]:::man
-        LAV["LAVORATORE"]:::worker
+    %% Definizione dei Nodi (Figure)
+    DL[💼 Datore di Lavoro<br>Potere Decisionale e di Spesa] --- RLS[🗣️ R.L.S.<br>Rappresentante Lavoratori]
+    DL --> RSPP[📐 R.S.P.P.<br>Consulente Tecnico]
+    DL --> MC[🩺 Medico Competente<br>Sorveglianza Sanitaria]
 
-        RSPP["RSPP"]:::staff
-        MC["MEDICO COMP."]:::staff
-        RLS["RLS"]:::rep
+    %% Nodo della Riunione Periodica (Ovale centrale)
+    MEETING((🤝 Riunione Periodica<br>Art. 35))
 
-        DL --> DIR --> PRE --> LAV
-        DL -.-> RSPP
-        DL -.-> MC
-        LAV -.-> RLS
-    end
+    %% Collegamenti alla Riunione (i 4 partecipanti obbligatori)
+    DL -. Partecipa .-> MEETING
+    RSPP -. Partecipa .-> MEETING
+    MC -. Partecipa .-> MEETING
+    RLS -. Partecipa .-> MEETING
 
-    %% ==========================================
-    %%   SUBGRAPH 2: I DOCUMENTI
-    %% ==========================================
-    subgraph Documenti ["📄 I DOCUMENTI"]
-        direction TB
-        NORMA("⚖️ D.Lgs 81/08<br>(Legge)"):::doc_law
-        DVR("⚠️ D.V.R.<br>(Valutazione Rischi)"):::doc_dvr
-        POS("🏗️ P.O.S.<br>(Piano Operativo)"):::doc_pos
+    %% Linea gerarchica operativa
+    DL ==> DIR[👔 Dirigente<br>Organizza e Vigila]
+    DIR ==> PRE[👷‍♂️ Preposto<br>Sovrintende e Controlla]
+    PRE ==> LAV[👷 Lavoratore<br>Esegue in Sicurezza]
 
-        NORMA --> DVR --> POS
-    end
+    %% Relazione di rappresentanza
+    RLS -. Rappresenta .-> LAV
 
-    %% ==========================================
-    %%   INTERAZIONI (LINK CORRETTI PER DOCSIFY)
-    %% ==========================================
-    
-    %% --- PERSONE ---
-    click DL "#/def_datore" "Apri scheda: Datore"
-    click DIR "#/def_dirigente" "Apri scheda: Dirigente"
-    click PRE "#/def_preposto" "Apri scheda: Preposto"
-    click LAV "#/def_lavoratore" "Apri scheda: Lavoratore"
-    
-    %% --- STAFF ---
-    click RSPP "#/def_rspp" "Apri scheda: RSPP"
-    click MC "#/def_medico" "Apri scheda: Medico"
-    click RLS "#/def_rls" "Apri scheda: RLS"
+    %% Stili
+    style DL fill:#1a237e,stroke:#fff,color:#fff,stroke-width:2px
+    style RLS fill:#f57f17,stroke:#333,color:#fff,stroke-width:2px
+    style RSPP fill:#0288d1,stroke:#fff,color:#fff
+    style MC fill:#00796b,stroke:#fff,color:#fff
+    style MEETING fill:#e1bee7,stroke:#8e24aa,stroke-width:2px,color:#000,stroke-dasharray: 5 5
+    style DIR fill:#5c6bc0,stroke:#fff,color:#fff
+    style PRE fill:#7986cb,stroke:#fff,color:#fff
+    style LAV fill:#9fa8da,stroke:#333,color:#000
 
-    %% --- DOCUMENTI ---
-    click NORMA "#/def_norme" "Apri scheda: Normativa"
-    click DVR "#/def_dvr" "Apri scheda: DVR"
-    click POS "#/def_pos" "Apri scheda: POS"
-    
-    %% ==========================================
-    %%   STILI
-    %% ==========================================
-    classDef boss fill:#000,color:#fff,stroke-width:2px;
-    classDef man fill:#007bff,color:#fff;
-    classDef worker fill:#fff,stroke:#333;
-    classDef staff fill:#6c757d,color:#fff,stroke-dasharray: 5 5;
-    classDef rep fill:#ffc107,color:#000;
-    classDef doc_law fill:#2c3e50,color:#fff,stroke:#f1c40f,stroke-width:2px;
-    classDef doc_dvr fill:#e67e22,color:#fff,stroke:#333,stroke-width:2px;
-    classDef doc_pos fill:#27ae60,color:#fff,stroke:#333,stroke-width:2px;
+    %% Link (Path corretti per Docsify)
+    click DL "def_datore.md" "Vai alla scheda del Datore"
+    click RLS "def_rls.md" "Vai alla scheda dell'RLS"
+    click RSPP "def_rspp.md" "Vai alla scheda dell'RSPP"
+    click MC "def_medico.md" "Vai alla scheda del Medico"
+    click DIR "def_dirigente.md" "Vai alla scheda del Dirigente"
+    click PRE "def_preposto.md" "Vai alla scheda del Preposto"
+    click LAV "def_lavoratore.md" "Vai alla scheda del Lavoratore"
+    click MEETING "#riunione-periodica-art-35" "Vai ai dettagli della Riunione"
