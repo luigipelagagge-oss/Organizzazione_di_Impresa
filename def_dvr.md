@@ -1,54 +1,31 @@
-# ⚠️ D.V.R. (Documento Valutazione Rischi)
+# ⚠️ Il Documento di Valutazione dei Rischi (D.V.R.)
 
-Il DVR è il documento **più importante** per la sicurezza. Non è un semplice pezzo di carta, ma la "fotografia dinamica" della sicurezza in azienda.
+Il D.V.R. è la "mappa" di tutti i rischi presenti in azienda e delle misure prese per eliminarli o ridurli.
+È il documento cardine della sicurezza (Art. 17 e 28 D.Lgs 81/08).
 
----
+## Caratteristiche Fondamentali
 
-## 1. Il Metodo di Valutazione (R = P × D)
-Per valutare un rischio non si va "a sensazione". La legge impone un metodo scientifico basato su una formula precisa:
+?> **REQUISITO ESSENZIALE:**
+Il documento deve avere **DATA CERTA** (PEC, firma digitale o timbro postale) per dimostrare che è stato fatto *prima* di un eventuale infortunio.
 
-> ### **R = P × D**
-
-Dove:
-* **P = Probabilità:** Quanto è probabile che l'evento accada? (Scala 1-4).
-* **D = Danno:** Se l'evento accade, quanto male ci si fa? (Scala 1-4).
-* **R = Rischio:** Il numero finale che indica l'urgenza dell'intervento.
-
-### 🔢 La Matrice del Rischio
-Ecco la visualizzazione grafica che incrocia Probabilità e Danno:
-
-<img src="ValutazioneRischi.jpg" alt="Matrice Rischio" width="600" style="display: block; margin: 0 auto;">
-<br>
-
-> **Legenda Colori:**
-> * <span style="color:#8BC34A">■</span> **Verde (Basso):** Rischio accettabile. Nessuna azione immediata.
-> * <span style="color:#FFEB3B">■</span> **Giallo (Medio):** Rischio da monitorare. Programmare miglioramenti.
-> * <span style="color:#FF9800">■</span> **Arancione (Medio-Alto):** Intervento correttivo necessario a breve termine.
-> * <span style="color:#FF3D00">■</span> **Rosso (Alto):** Pericolo grave. **Sospendere l'attività** o intervenire subito.
+Il D.V.R. deve essere redatto dal **Datore di Lavoro** in collaborazione con:
+* Il Responsabile del Servizio di Prevenzione e Protezione (RSPP).
+* Il Medico Competente (MC).
+* Il Rappresentante dei Lavoratori per la Sicurezza (RLS) (che deve essere consultato).
 
 ---
 
-## 2. Le Misure di Prevenzione e Protezione
-Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per abbassarlo.
+## Quando va aggiornato?
 
-1.  **Prevenzione:** Azioni per abbassare la **Probabilità** (es. formazione, manutenzione macchine).
-2.  **Protezione:** Azioni per abbassare il **Danno** (es. uso dei DPI come caschi e scarpe, barriere fisiche).
+Il D.V.R. non è statico. Va rifatto immediatamente se:
+1.  Cambia il processo produttivo o l'organizzazione.
+2.  Avvengono infortuni significativi.
+3.  La sorveglianza sanitaria ne evidenzia la necessità.
+
+!> **SANZIONI PENALI (Art. 55)**
+La mancata redazione del D.V.R. comporta per il Datore di Lavoro:
+* **Arresto** da 3 a 6 mesi.
+* **Ammenda** da 2.500 € a 6.400 €.
 
 ---
-
-## 3. Dati Generali del Documento
-
-* **Chi lo redige?**
-    * Il **Datore di Lavoro** (obbligo *non delegabile*).
-    * Collaborazione obbligatoria: **RSPP** e **Medico Competente**.
-    * Consultazione obbligatoria: **RLS**.
-* **Quando si fa?**
-    * Entro **90 giorni** dall'apertura della nuova attività.
-    * Va aggiornato **immediatamente** se:
-        * Cambia il processo produttivo.
-        * Cambia l'organizzazione del lavoro.
-        * Avvengono infortuni significativi o la sorveglianza sanitaria ne evidenzia la necessità.
-* **Data Certa:**
-    Il documento deve avere "Data Certa" (es. PEC, firma digitale) per dimostre legalmente che è stato fatto *prima* di un eventuale infortunio.
-
-[🔙 Torna all'Organigramma](ud4.md)
+[🔙 Torna alla Mappa Sicurezza](ud4.md)
