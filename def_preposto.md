@@ -7,7 +7,7 @@ Persona che sovrintende alla attività lavorativa e garantisce l'attuazione dell
 
 ### 📸 Il Ruolo in Sintesi
 
-![Il Ruolo del Preposto](Preposto.jpg)
+![Il Ruolo del Preposto](Preposto.png)
 
 ---
 
