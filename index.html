@@ -5,66 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Organizzazione d'Impresa</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Librerie necessarie -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-    <style>
-        /* Stili per Mermaid */
-        .mermaid {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            margin: 20px 0;
-            overflow: auto;
-        }
-        
-        /* Stili per i link nel contenuto */
-        .content-link {
-            color: #007bff;
-            text-decoration: none;
-            border-bottom: 1px dotted #007bff;
-        }
-        
-        .content-link:hover {
-            color: #0056b3;
-            border-bottom: 1px solid #0056b3;
-        }
-        
-        /* Bottone di navigazione */
-        .nav-button {
-            display: inline-block;
-            background: #007bff;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        
-        .nav-button:hover {
-            background: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Contenitore principale -->
-    <div class="sidebar" id="sidebar-container">
-        <!-- Sidebar verrà caricata qui -->
-    </div>
-    
-    <div class="main-content">
-        <div id="content">
-            <!-- Contenuto principale verrà caricato qui dinamicamente -->
-            <div style="text-align: center; padding: 100px 20px;">
-                <h1>Organizzazione d'Impresa</h1>
-                <p>Caricamento in corso...</p>
+    <div class="container">
+        <!-- Header fisso -->
+        <header class="header">
+            <h1><i class="fas fa-building"></i> Organizzazione d'Impresa</h1>
+            <nav class="main-nav">
+                <a href="#home" class="nav-btn active"><i class="fas fa-home"></i> Home</a>
+                <a href="#ud4" class="nav-btn"><i class="fas fa-shield-alt"></i> Sicurezza</a>
+                <a href="#manuale" class="nav-btn"><i class="fas fa-book"></i> Manuale</a>
+            </nav>
+        </header>
+
+        <!-- Contenuto principale -->
+        <main id="content" class="content">
+            <div class="welcome">
+                <h2>Benvenuto</h2>
+                <p>Seleziona una pagina dal menu di navigazione.</p>
             </div>
-        </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>© 2024 Luigi Pelagagge - Progetto Didattico</p>
+        </footer>
     </div>
 
-    <!-- Script principale -->
-    <script src="router.js"></script>
+    <!-- Script semplice -->
+    <script>
+        // Mappa delle pagine
+        const pages = {
+            'home': 'README.md',
+            'ud4': 'ud4.md',
+            'manuale': 'manuale_completo.md',
+            'def_dvr': 'def_dvr.md',
+            'def_datore': 'def_datore.md',
+            'def_dirigente': 'def_dirigente.md',
+            'def_preposto': 'def_preposto.md',
+            'def_lavoratore': 'def_lavoratore.md',
+            'def_rspp': 'def_rspp.md',
+            'def_medico': 'def_medico.md',
+            'def_rls': 'def_rls.md'
+        };
+
+        // Carica una pagina
+        async function loadPage(pageId) {
+            const contentDiv = document.getElementById('content');
+            
+            if (!pages[pageId]) {
+                contentDiv.innerHTML = `
+                    <div class="error">
+                        <h2>Pagina non trovata</h2>
+                        <a href="#home" class="btn">Torna alla Home</a>
+                    </div>
+                `;
+                return;
+            }
+
+            try {
+                const response = await fetch(pages[pageId]);
+                const text = await response.text();
+                
+                // Sostituisci i link .md con #
+                const processedText = text.replace(/\[([^\]]+)\]\(([^)]+)\.md\)/g, function(match, text, link) {
+                    const pageName = link.replace('./', '');
+                    return pages[pageName] ? `[${text}](#${pageName})` : match;
+                });
+                
+                // Converti markdown semplice (solo per titoli e paragrafi)
+                const html = processedText
+                    .replace(/^# (.*$)/gm, '<h1>$1</h1>')
+                    .replace(/^## (.*$)/gm, '<h2>$1</h2>')
+                    .replace(/^### (.*$)/gm, '<h3>$1</h3>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\n\n/g, '</p><p>')
+                    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img src="$2" alt="$1" class="content-img">');
+                
+                contentDiv.innerHTML = `<div class="page-content">${html}</div>`;
+                
+                // Aggiungi gestione click ai link interni
+                document.querySelectorAll('#content a[href^="#"]').forEach(link => {
+                    link.onclick = function(e) {
+                        e.preventDefault();
+                        const target = this.getAttribute('href').substring(1);
+                        window.location.hash = target;
+                    };
+                });
+                
+            } catch (error) {
+                contentDiv.innerHTML = `
+                    <div class="error">
+                        <h2>Errore di caricamento</h2>
+                        <p>${error.message}</p>
+                        <a href="#home" class="btn">Torna alla Home</a>
+                    </div>
+                `;
+            }
+        }
+
+        // Gestione hash
+        window.onhashchange = function() {
+            const pageId = window.location.hash.substring(1) || 'home';
+            loadPage(pageId);
+            
+            // Aggiorna menu attivo
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('href') === `#${pageId}`) {
+                    btn.classList.add('active');
+                }
+            });
+        };
+
+        // Carica pagina iniziale
+        window.onload = function() {
+            if (!window.location.hash) window.location.hash = 'home';
+            window.onhashchange();
+        };
+    </script>
 </body>
 </html>
