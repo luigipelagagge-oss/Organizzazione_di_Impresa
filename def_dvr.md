@@ -51,4 +51,4 @@ Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per
 * **Data Certa:**
     Il documento deve avere "Data Certa" (es. PEC, firma digitale) per dimostre legalmente che è stato fatto *prima* di un eventuale infortunio.
 
-[🔙 Torna all'Organigramma](ud4.md)
+[🔙 Torna all'Organigramma](#/ud4)
