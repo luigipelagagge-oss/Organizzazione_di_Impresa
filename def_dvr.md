@@ -1,37 +1,68 @@
-# ⚠️ Il Documento di Valutazione dei Rischi (D.V.R.)
+# ⚠️ D.V.R. (Documento Valutazione Rischi)
 
-Il D.V.R. è la "mappa" di tutti i rischi presenti in azienda e delle misure prese per eliminarli o ridurli.
-È il documento cardine della sicurezza (Art. 17 e 28 D.Lgs 81/08).
-
-## 1. La Formula del Rischio
-La valutazione si basa su una formula matematica precisa per dare un "peso" a ogni pericolo:
-
-> **R (Rischio) = P (Probabilità) x D (Danno)**
-
-| Fattore | Descrizione | Esempio |
-| :---: | :--- | :--- |
-| **P** | **PROBABILITÀ** | Quanto è probabile che l'evento accada? (Scala 1-4) |
-| **D** | **DANNO** | Quanto grave sarebbe l'infortunio? (Scala 1-4) |
-| **R** | **RISCHIO** | Il risultato. Se è alto, servono misure urgenti. |
+Il DVR è il documento **più importante** per la sicurezza. Non è un semplice pezzo di carta, ma la "fotografia dinamica" della sicurezza in azienda.
 
 ---
 
-## 2. Requisiti e Aggiornamento
+## 1. Il Metodo di Valutazione (R = P × D)
 
-?> **REQUISITO ESSENZIALE:**
-Il documento deve avere **DATA CERTA** (PEC, firma digitale o timbro postale) per dimostrare che è stato fatto *prima* di un eventuale infortunio.
+Per valutare un rischio non si va "a sensazione". La legge impone un metodo scientifico basato su una formula precisa:
 
-Il D.V.R. deve essere redatto dal **Datore di Lavoro** in collaborazione con RSPP, Medico Competente e consultando l'RLS.
+> **R = P × D**
 
-### Quando va aggiornato?
-1.  Cambia il processo produttivo.
-2.  Avvengono infortuni significativi.
-3.  La sorveglianza sanitaria ne evidenzia la necessità.
+Dove:
+* **P = Probabilità:** Quanto è probabile che l'evento accada? (Scala 1-4).
+* **D = Danno:** Se l'evento accade, quanto male ci si fa? (Scala 1-4).
+* **R = Rischio:** Il numero finale che indica l'urgenza dell'intervento.
 
-!> **SANZIONI PENALI (Art. 55)**
-La mancata redazione del D.V.R. comporta per il Datore di Lavoro:
-* **Arresto** da 3 a 6 mesi.
-* **Ammenda** da 2.500 € a 6.400 €.
+### 🔢 La Matrice del Rischio
+Ecco la visualizzazione grafica che incrocia Probabilità e Danno:
+
+| P \ D | 1. Lievissimo | 2. Modesto | 3. Grave | 4. Gravissimo |
+| :---: | :---: | :---: | :---: | :---: |
+| **4. Frequente** | 🟡 MEDIO | 🟠 ALTO | 🔴 CRITICO | 🔴 CRITICO |
+| **3. Probabile** | 🟡 MEDIO | 🟡 MEDIO | 🟠 ALTO | 🔴 CRITICO |
+| **2. Occasionale**| 🟢 BASSO | 🟡 MEDIO | 🟡 MEDIO | 🟠 ALTO |
+| **1. Improbabile**| 🟢 BASSO | 🟢 BASSO | 🟢 BASSO | 🟡 MEDIO |
+
+?> **Legenda Colori:**
+* 🟩 **Verde (Basso):** Rischio accettabile. Nessuna azione immediata.
+* 🟨 **Giallo (Medio):** Rischio da monitorare. Programmare miglioramenti.
+* 🟧 **Arancione (Medio-Alto):** Intervento correttivo necessario a breve termine.
+* 🟥 **Rosso (Alto):** Pericolo grave. **Sospendere l'attività** o intervenire subito.
 
 ---
-[🔙 Torna alla Mappa Sicurezza](ud4.md)
+
+## 2. Le Misure di Prevenzione e Protezione
+
+Una volta calcolato il rischio (**R**), il Datore di Lavoro deve intervenire per abbassarlo.
+
+| Tipo | Obiettivo | Esempio |
+| :--- | :--- | :--- |
+| **🛡️ PREVENZIONE** | Abbassare la **Probabilità** | Formazione, manutenzione macchine, procedure. |
+| **⛑️ PROTEZIONE** | Abbassare il **Danno** | Uso dei DPI (caschi, scarpe), barriere fisiche, estintori. |
+
+---
+
+## 3. Dati Generali del Documento
+
+### ✍️ Chi lo redige?
+Il **Datore di Lavoro** (è un obbligo **non delegabile**).
+Deve però avvalersi della collaborazione di:
+* **RSPP** (Responsabile Servizio Prevenzione e Protezione).
+* **Medico Competente**.
+* **RLS** (Rappresentante Lavoratori) -> *Consultazione obbligatoria*.
+
+### 📅 Quando si fa?
+* Entro **90 giorni** dall'apertura della nuova attività.
+* Va aggiornato **immediatamente** se:
+    1. Cambia il processo produttivo.
+    2. Cambia l'organizzazione del lavoro.
+    3. Avvengono infortuni significativi.
+    4. La sorveglianza sanitaria ne evidenzia la necessità.
+
+!> **ATTENZIONE: DATA CERTA**
+Il documento deve avere **"Data Certa"** (es. PEC, firma digitale, timbro postale) per dimostrare legalmente che è stato fatto **prima** di un eventuale infortunio. Senza data certa, in tribunale non vale nulla.
+
+---
+[🔙 Torna all'Organigramma](ud4.md)
