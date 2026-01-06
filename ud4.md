@@ -58,24 +58,24 @@ graph TD
     end
 
     %% ==========================================
-    %%   INTERAZIONI (LINK FILE .md)
+    %%   INTERAZIONI (LINK CORRETTI PER DOCSIFY)
     %% ==========================================
     
     %% --- PERSONE ---
-    click DL "def_datore.md" "Apri scheda: Datore"
-    click DIR "def_dirigente.md" "Apri scheda: Dirigente"
-    click PRE "def_preposto.md" "Apri scheda: Preposto"
-    click LAV "def_lavoratore.md" "Apri scheda: Lavoratore"
+    click DL "#/def_datore" "Apri scheda: Datore"
+    click DIR "#/def_dirigente" "Apri scheda: Dirigente"
+    click PRE "#/def_preposto" "Apri scheda: Preposto"
+    click LAV "#/def_lavoratore" "Apri scheda: Lavoratore"
     
     %% --- STAFF ---
-    click RSPP "def_rspp.md" "Apri scheda: RSPP"
-    click MC "def_medico.md" "Apri scheda: Medico"
-    click RLS "def_rls.md" "Apri scheda: RLS"
+    click RSPP "#/def_rspp" "Apri scheda: RSPP"
+    click MC "#/def_medico" "Apri scheda: Medico"
+    click RLS "#/def_rls" "Apri scheda: RLS"
 
     %% --- DOCUMENTI ---
-    click NORMA "def_norme.md" "Apri scheda: Normativa"
-    click DVR "def_dvr.md" "Apri scheda: DVR"
-    click POS "def_pos.md" "Apri scheda: POS"
+    click NORMA "#/def_norme" "Apri scheda: Normativa"
+    click DVR "#/def_dvr" "Apri scheda: DVR"
+    click POS "#/def_pos" "Apri scheda: POS"
     
     %% ==========================================
     %%   STILI
