@@ -1,88 +1,34 @@
  <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <title>Economia Aziendale TPSEE</title>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsify-themeable@0/dist/css/theme-simple.css">
-  
-  <style>
-    /* STILE BASE ESISTENTE */
-    :root {
-      --base-font-size: 16px;
-      --theme-color: #007bff;
-      --sidebar-width: 18rem;
-    }
-    .sidebar { background-color: #f8f9fa; border-right: 1px solid #e9ecef; }
-    table { display: table !important; width: 100%; }
-
-    /* --- NUOVO: STILE SPECIFICO PER LA STAMPA --- */
-    /* Queste regole si attivano solo quando premi il tasto STAMPA */
-    @media print {
-       /* Nascondi Sidebar, navigazione e il bottone stesso */
-       .sidebar, .sidebar-toggle, .app-nav, .github-corner { display: none !important; }
-       .print-btn { display: none !important; } 
-       
-       /* Allarga il contenuto a tutta pagina */
-       section.content { margin-left: 0 !important; padding-top: 0 !important; }
-       .markdown-section { max-width: 100% !important; padding: 0 !important; }
-       body { font-size: 12pt; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizzazione d'Impresa</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
+    <style>
+        .mermaid { 
+            background: white; 
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin: 20px 0;
+            overflow: auto;
+        }
+    </style>
 </head>
 <body>
-  <div id="app">Caricamento corso...</div>
-  
-  <script>
-    window.$docsify = {
-      name: 'TPSEE • Economia',
-      repo: '', 
-      loadSidebar: 'sidebar.md', // Assicurati che il file si chiami sidebar.md (o _sidebar.md se default)
-      subMaxLevel: 3,
-      auto2top: true,
-      
-      // CONFIGURAZIONE MERMAID
-      mermaidConfig: {
-        querySelector: ".mermaid",
-        securityLevel: 'loose', 
-        startOnLoad: true
-      },
+    <div class="sidebar" id="sidebar">
+        <!-- La sidebar verrà caricata dinamicamente -->
+    </div>
+    
+    <div class="main-content">
+        <div id="content">
+            <!-- Il contenuto principale verrà caricato qui -->
+        </div>
+    </div>
 
-      // --- NUOVO: PLUGIN PER IL BOTTONE STAMPA ---
-      plugins: [
-        function(hook, vm) {
-          hook.beforeEach(function(html) {
-            // Crea il bottone HTML
-            var printButton = 
-              '<div style="text-align: right; margin-bottom: 20px;">' +
-                '<button class="print-btn" onclick="window.print()" ' +
-                'style="background-color: #007bff; color: white; border: none; padding: 8px 15px; cursor: pointer; border-radius: 5px; font-weight: bold;">' +
-                '🖨️ STAMPA / PDF' +
-                '</button>' +
-              '</div>';
-            // Lo aggiunge PRIMA del contenuto della pagina
-            return printButton + html;
-          });
-        }
-      ]
-    }
-  </script>
-  
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
-  
-  <script src="//unpkg.com/mermaid/dist/mermaid.js"></script>
-  <script src="//unpkg.com/docsify-mermaid@latest/dist/docsify-mermaid.js"></script>
-  
-  <script>
-    mermaid.initialize({ 
-        startOnLoad: true, 
-        securityLevel: 'loose' 
-    });
-  </script>
-
+    <script src="router.js"></script>
 </body>
 </html>
