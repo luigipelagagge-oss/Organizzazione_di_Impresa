@@ -19,14 +19,14 @@ La sicurezza non è un'opzione, ma un obbligo definito dal **Testo Unico (D.Lgs 
 
 ---
 
-## 3. 🗺️ Mappa Interattiva: Documenti e Ruoli
+## 3. 🗺️ Mappa Interattiva: Ruoli e Relazioni
 
-Clicca sulle caselle per approfondire. A sinistra trovi la gerarchia dei **Documenti**, a destra quella delle **Persone** (con la Riunione Periodica al centro).
+Clicca sulle caselle per approfondire. Le frecce indicano **chi nomina**, **chi elegge** e **chi controlla**.
 
 ```mermaid
 graph TD
     %% ==========================================
-    %%    SUBGRAPH 1: I DOCUMENTI (Recuperato)
+    %%    SUBGRAPH 1: I DOCUMENTI
     %% ==========================================
     subgraph Documenti ["📄 I DOCUMENTI"]
         direction TB
@@ -38,50 +38,55 @@ graph TD
     end
 
     %% ==========================================
-    %%    SUBGRAPH 2: LE PERSONE (Aggiornato)
+    %%    SUBGRAPH 2: LE PERSONE
     %% ==========================================
     subgraph Persone ["👥 L'ORGANIGRAMMA"]
         direction TB
         
-        %% Nodi Superiori
+        %% --- LIVELLO APICALE ---
         DL[💼 Datore di Lavoro]:::boss 
         RSPP[📐 R.S.P.P.]:::staff
         MC[🩺 Medico Comp.]:::staff
         RLS[🗣️ R.L.S.]:::rep
 
-        %% Nodo Riunione
+        %% --- NODO RIUNIONE ---
         MEETING((🤝 Riunione<br>Art. 35)):::meeting
 
-        %% Relazioni Staff
-        DL --- RLS
-        DL -.-> RSPP
-        DL -.-> MC
+        %% --- RELAZIONI STAFF (I VERBI) ---
+        DL -- Nomina --> RSPP
+        DL -- Nomina --> MC
+        
+        RSPP -. Fornisce Consulenza .-> DL
+        MC -. Collabora .-> DL
+        DL -. Si consulta .-> RLS
 
-        %% Collegamenti alla Riunione
-        DL -.-> MEETING
-        RSPP -.-> MEETING
-        MC -.-> MEETING
-        RLS -.-> MEETING
+        %% --- COLLEGAMENTI ALLA RIUNIONE ---
+        DL -. Partecipa .-> MEETING
+        RSPP -. Partecipa .-> MEETING
+        MC -. Partecipa .-> MEETING
+        RLS -. Partecipa .-> MEETING
 
-        %% Linea Gerarchica
+        %% --- LINEA GERARCHICA (I VERBI) ---
         DIR[👔 Dirigente]:::man
         PRE[👷‍♂️ Preposto]:::man
         LAV[👷 Lavoratore]:::worker
 
-        DL ==> DIR ==> PRE ==> LAV
-        RLS -. Rappresenta .-> LAV
+        DL == Delega ==> DIR
+        DIR == Vigila ==> PRE
+        PRE == Sovrintende ==> LAV
+        
+        %% --- ELEZIONE RLS ---
+        LAV -. Eleggono .-> RLS
     end
 
     %% ==========================================
     %%    LINK (INTERAZIONI)
     %% ==========================================
     
-    %% Documenti
     click NORMA "def_norme.md" "Vai a Normativa"
     click DVR "def_dvr.md" "Vai a DVR"
     click POS "def_pos.md" "Vai a POS"
 
-    %% Persone
     click DL "def_datore.md" "Vai a Datore"
     click RLS "def_rls.md" "Vai a RLS"
     click RSPP "def_rspp.md" "Vai a RSPP"
